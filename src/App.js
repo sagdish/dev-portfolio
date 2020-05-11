@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import Fade from 'react-reveal/Fade';
 import './App.css';
+// import BG from './img/bigmainBG.jpg'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Fade delay={1000} duration={4000}>
+        <div className='image'>
+          <h1>placeholder</h1>
+          {/* <img src={BG} alt='' /> */}
+        </div>
+      </Fade>
     </div>
   );
 }
