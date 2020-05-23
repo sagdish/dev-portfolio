@@ -8,12 +8,11 @@ import './App.css';
 
 function App() {
   return (
-      <Fade delay={1000} duration={4000}>
+      <Fade delay={1000} duration={1000}>
         <div className='main-container'>
           <Navbar />
           <Default />
-          {/* <div className='content'>main area</div> */}
-          <div className='footer'>footer</div>
+          <Footer />
         </div>
       </Fade>
   );

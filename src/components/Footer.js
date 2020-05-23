@@ -2,8 +2,14 @@ import React from 'react';
 
 function Footer(props) {
   return (
-    <div>
-      this is footer
+    <div className='footer'>
+      <div className='footer-social'>
+        social media icons
+      </div>
+      <div className='footer-name'>
+        SAGDI FORMANOV
+      </div>
+      
     </div>
   );
 }
