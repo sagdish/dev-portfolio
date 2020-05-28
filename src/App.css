@@ -118,6 +118,22 @@
   border: none;
   margin-right: 5px;
 }
+.dots{
+  position: absolute;
+  /* right: 50%; */
+  width: 15%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+.dots > * {
+  width: 10px;
+  height: 10px;
+  /* border-radius: 25px; */
+  /* border-radius: 50%; */
+}
 
 .content-carousel_line {
   /* border-right: 4px solid red; */
