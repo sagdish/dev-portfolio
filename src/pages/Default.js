@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CarouselProvider, 
   Slider, Slide, ButtonBack, 
-  ButtonNext, Image
+  ButtonNext, Image,
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,7 +12,7 @@ import image2 from '../img/two.png'
 import image3 from '../img/three.png'
 
 function Default() {
-
+  const [slide, setSlide] = useState(0)
   const [animate, setAnimate] = useState(false);
   // console.log(animate)
 
@@ -23,6 +23,11 @@ function Default() {
       setAnimate(false)
       console.log(animate)
     }, 1000);
+  }
+
+  // for mobile touch event
+  const touchEvent = ev => {
+    addAndRemove();
   }
 
   return (
@@ -41,35 +46,44 @@ function Default() {
         <CarouselProvider
           naturalSlideWidth={16}
           naturalSlideHeight={9.5}
-          isPlaying={true}
+          isPlaying={false}
           totalSlides={3}
+          currentSlide={slide}
+          hasMasterSpinner={true}
+          // infinite
         >
-          {/* <h1 className="projectsName">Projects:</h1> */}
+          {/* <h1 className="projectsName">Project name: {slide === 0 ? 
+          ' Arc Registry' : ' SFspots'}</h1> */}
           <div className='carousel'>
-            <Slider className='slider'>
+            <Slider className='slider'
+            trayProps={{
+              onTouchEnd: touchEvent,
+              // onTouchEnd: touchEvent,
+            }}
+            >
               <Slide index={0}>
-                <a href="https://arcregistry.com" 
+                {/* <a href="https://arcregistry.com" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                >
+                > */}
                   <Image src={image1}/>
-                </a>
+                {/* </a> */}
               </Slide>
               <Slide index={1}>
-                <a href="https://sf-spots.sagdi.now.sh/" 
+                {/* <a href="https://sf-spots.sagdi.now.sh/" 
                   target="_blank" 
-                  rel="noopener noreferrer" 
+                  rel="noopener noreferrer"  */}
                 >
                   <Image src={image2}/>
-                </a>
+                {/* </a> */}
               </Slide>
               <Slide index={2}>
-                <a href="https://lyfe-logger-fe.herokuapp.com/" 
+                {/* <a href="https://lyfe-logger-fe.herokuapp.com/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                >
+                > */}
                   <Image src={image3}/>
-                </a>
+                {/* </a> */}
               </Slide>
             </Slider>
             <ButtonBack className='slider-buttons_l' 

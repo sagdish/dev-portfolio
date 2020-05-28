@@ -10,28 +10,28 @@ function Footer(props) {
           target="_blank" 
           rel="noopener noreferrer" 
         >
-          <FontAwesomeIcon icon={faGithub} size='3x' className='icon'/>
+          <FontAwesomeIcon icon={faGithub} size='2x' className='icon'/>
         </a>
 
         <a href="https://linkedin.com/in/sagdi-formanov/" 
           target="_blank" 
           rel="noopener noreferrer" 
         >
-          <FontAwesomeIcon icon={faLinkedin} size='3x' className='icon'/>
+          <FontAwesomeIcon icon={faLinkedin} size='2x' className='icon'/>
         </a>
 
         <a href="https://twitter.com/FormanovSagdi" 
           target="_blank" 
           rel="noopener noreferrer" 
         >
-          <FontAwesomeIcon icon={faTwitter} size='3x' className='icon' />
+          <FontAwesomeIcon icon={faTwitter} size='2x' className='icon' />
         </a>
 
         <a href="https://instagram.com/forsi_ph" 
           target="_blank" 
           rel="noopener noreferrer" 
         >
-          <FontAwesomeIcon icon={faInstagram} size='3x' className='icon'/>
+          <FontAwesomeIcon icon={faInstagram} size='2x' className='icon'/>
         </a>
 
       </div>
