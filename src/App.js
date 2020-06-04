@@ -12,7 +12,9 @@ function App() {
   return (
     <div className='main-container'>
           <Navbar />
-            <Fade delay={1000} duration={3000}>
+            <Fade 
+            // delay={1000}
+            duration={3000}>
               <Route exact path='/' component={ Default } />
             </Fade>
             <Route path='/about' component={ About } />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { CarouselProvider, 
   Slider, Slide, ButtonBack, 
@@ -8,17 +8,42 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { useChain, animated, useTransition, useSpring, config } from 'react-spring';
 
+import { Container, Item } from '../components/styles'
 import image1 from '../img/one.png'
 import image2 from '../img/two.png'
 import image3 from '../img/three.png'
 
 function Default() {
+
+  const populate =  [{name: 'about'}, {name: 'blog'}, {name: 'projects'}]
+
   const [slide, setSlide] = useState(0)
   const [animate, setAnimate] = useState(false);
-  // console.log(animate)
+  // below is animation for button menu:
+  const [open, set ] = useState(false);
+  const springRef = useRef();
+  const { size, opacity, height, ...rest } = useSpring({
+    ref: springRef,
+    config: config.stiff,
+    from: { size: '80px', height: '40px', background: 'black'},
+    to: { size: open ? '500px' : '80px', height: open ? '100px' : '40px', background: open? 'gray': 'gray'}
+  })
 
-  const addAndRemove = () =>{
+  const transRef = useRef()
+  const transition = useTransition(open ? populate : [], item => item.name, {
+    ref: transRef,
+    unique: true,
+    trail: 400 / populate.length,
+    from: { opacity: 0, transform: 'scale(0)' },
+    enter: { opacity: 1, transform: 'scale(1)' },
+    leave: { opacity: 0, transform: 'scale(0)' }
+  })
+
+  useChain(open ? [springRef, transRef] : [transRef, springRef], [0, open ? 0.1 : 0.6])
+
+  const addAndRemove = () => {
     setAnimate(true)
     console.log(animate)
     setTimeout(() => {
@@ -40,9 +65,16 @@ function Default() {
             Experimenting with UI & UX </p>
           {/* <Link to='/about'  >
           </Link> */}
-            <button className='content-title_button'>
-              . . .
-            </button>
+
+              <button className='content-title_button'>
+                . . .
+                  </button>
+                <Container style={{ ...rest, width: size, height: height }} onClick={() => set(open => !open)}>
+                  
+                  {transition.map(({ item, key, props }) => (
+                    <Item key={key} style={{ ...props, background: 'gray' }}> {item.name} </Item>
+                    ))}
+                </Container>
 
       </div>
 

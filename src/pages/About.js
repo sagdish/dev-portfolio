@@ -2,12 +2,14 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import Fade from 'react-reveal/Fade';
 
 import '../App.css'
 import photo from '../img/myPhoto.jpg'
 
 function About(props) {
   return (
+    <Fade duration={2000} >
     <div className='content'>
       <div>
         <Link to='/' >
@@ -40,6 +42,7 @@ function About(props) {
       </div>
       
     </div>
+    </Fade>
   );
 }
 
