@@ -19,7 +19,7 @@ function About(props) {
       <div className='content-title' style={{
         // height: '40vh',
         // width: 'auto',
-        // border: '3px solid white'
+        // border: '3px solid white',
         paddingLeft: '70px'
       }}>
         <img src={photo} alt='' style={{
