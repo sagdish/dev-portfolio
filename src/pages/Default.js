@@ -93,7 +93,7 @@ function Default() {
           naturalSlideWidth={16}
           naturalSlideHeight={9.5}
           isPlaying={false}
-          totalSlides={4}
+          totalSlides={3}
           currentSlide={slide}
           hasMasterSpinner={false}
           // infinite
@@ -135,7 +135,7 @@ function Default() {
 
                 {/* </a> */}
               </Slide>
-              <Slide index={3} className='slide'>
+              {/* <Slide index={3} className='slide'>
       
                   <div>
                     Open:
@@ -151,7 +151,7 @@ function Default() {
                     </Link>
                   </div>
 
-              </Slide>
+              </Slide> */}
             </Slider>
             <ButtonBack className='slider-buttons_l' 
               onClick={addAndRemove}
