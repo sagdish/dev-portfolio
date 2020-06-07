@@ -6,9 +6,9 @@ import { CarouselProvider,
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faArrowAltCircleLeft, faArrowAltCircleRight } from '@fortawesome/free-regular-svg-icons';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { useChain, animated, useTransition, useSpring, config } from 'react-spring';
+import { faWindowMinimize } from '@fortawesome/free-regular-svg-icons';
+import { faAngleLeft, faAngleRight, faCompressAlt } from '@fortawesome/free-solid-svg-icons';
+import { useChain, useTransition, useSpring, config } from 'react-spring';
 
 import { Container, Item } from '../components/styles'
 import image1 from '../img/one.png'
@@ -16,19 +16,19 @@ import image2 from '../img/two.png'
 import image3 from '../img/three.png'
 
 function Default() {
-
-  const populate =  [{name: 'about'}, {name: 'blog'}, {name: 'projects'}]
+  const compressIcon = <FontAwesomeIcon icon={faWindowMinimize} size='sm'/> 
+  const populate =  [{name: 'About'}, {name: 'Projects'}, {name: 'Blog -ish'}, {name: 'Contact'}, {name: compressIcon}]
 
   const [slide, setSlide] = useState(0)
   const [animate, setAnimate] = useState(false);
   // below is animation for button menu:
   const [open, set ] = useState(false);
   const springRef = useRef();
-  const { size, opacity, height, ...rest } = useSpring({
+  const { width, opacity, height, ...rest } = useSpring({
     ref: springRef,
-    config: config.stiff,
-    from: { size: '80px', height: '40px', background: 'black'},
-    to: { size: open ? '500px' : '80px', height: open ? '100px' : '40px', background: open? 'gray': 'gray'}
+    config: config.default,
+    from: { width: '100px', height: '45px', background: '#212224'},
+    to: { width: open ? '400px' : '100px', height: open ? '160px' : '45px'}
   })
 
   const transRef = useRef()
@@ -66,15 +66,25 @@ function Default() {
           {/* <Link to='/about'  >
           </Link> */}
 
-              <button className='content-title_button'>
+              {/* <button className='content-title_button'>
                 . . .
-                  </button>
-                <Container style={{ ...rest, width: size, height: height }} onClick={() => set(open => !open)}>
-                  
-                  {transition.map(({ item, key, props }) => (
-                    <Item key={key} style={{ ...props, background: 'gray' }}> {item.name} </Item>
+                  </button> */}
+                {/* <div className='content-title_button'>
+                  . . . */}
+                  <Container className='content-title_button' style={{ ...rest, width: width, height: height }} onClick={() => set(open => !open)}>
+                    {transition.length === 0 ? '. . .' : ''}
+                    {transition.map(({ item, key, props }, i) => (
+                      <>
+                        { i !== 4 ? (
+                        <Link to={key} key={key} style={{textDecoration: 'none'}}>
+                          <Item key={key} style={{ ...props}}> {item.name} </Item>
+                        </Link>) : 
+                        <Item key={key} style={{ ...props}}> {item.name} </Item>
+                        }
+                      </>
                     ))}
-                </Container>
+                  </Container>
+                {/* </div> */}
 
       </div>
 
@@ -85,7 +95,7 @@ function Default() {
           isPlaying={false}
           totalSlides={4}
           currentSlide={slide}
-          hasMasterSpinner={true}
+          hasMasterSpinner={false}
           // infinite
         >
           {/* <h1 className="projectsName">Project name: {slide === 0 ? 
