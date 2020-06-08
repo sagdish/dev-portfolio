@@ -35,7 +35,7 @@ function About(props) {
       }}>
         Hey, I’m Sagdi.
         I am Web developer with Automobile Engineering background. I like to create new stuff and experiment with it. 
-        Nothing is constant so I favor action over perfection (I learn it hard way). I am getting passionate about User Experience and Design, 
+        Nothing is constant so I favor action over perfection (I learn it the hard way). I am getting passionate about User Experience and Design, 
         I’m in the process to nail that skill on professional level. This website is one on my attempts of trial and error of my learning process.
         I hope you like it.
         <br/> I think that technology evolving faster than we can get use to it, so best way is adapt mentality of being uncomfortable to some degree. 

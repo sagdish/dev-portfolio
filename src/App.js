@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Default from './pages/Default';
 import About from './pages/About';
+import Work from './pages/Work';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -18,6 +19,8 @@ function App() {
             >
               <Route exact path='/' component={ Default } />
               <Route path='/about' component={ About } />
+              <Route path='/projects' component={ Work } />
+
             </Fade>
           <Footer />
         </div>
