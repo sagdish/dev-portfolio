@@ -4,12 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindowMinimize } from '@fortawesome/free-regular-svg-icons';
 import { useChain, useTransition, useSpring, config } from 'react-spring';
 
+import Iam from '../components/Iam'
 import Carousel from '../components/Carousel'
 import { Container, Item } from '../components/styles'
 
 function Default() {
   const compressIcon = <FontAwesomeIcon icon={faWindowMinimize} size='sm'/> 
-  const populate =  [{name: 'About'}, {name: 'Projects'}, {name: 'Blog -ish'}, {name: 'Contact'}, {name: compressIcon}]
+  const populate =  [{name: 'Bio', url: 'about'}, {name: 'Projects', url: 'projects'}, {name: 'Blog-ish', url: 'blog'}, {name: 'Contact', url: 'contact'}, {name: compressIcon}]
 
   // below is animation for button menu:
   const [open, set ] = useState(false);
@@ -42,7 +43,7 @@ function Default() {
           {transition.map(({ item, key, props }, i) => (
             <>
               { i !== 4 ? (
-              <Link to={key} key={key} style={{textDecoration: 'none'}}>
+              <Link to={item.url} key={key} style={{textDecoration: 'none'}}>
                 <Item key={key} style={{ ...props}}> {item.name} </Item>
               </Link>) : 
               <Item key={key} style={{ ...props}}> {item.name} </Item>
@@ -51,6 +52,7 @@ function Default() {
           ))}
         </Container>
       </div>
+      {/* <Iam /> */}
       <Carousel />
     </div>
   );

@@ -57,7 +57,13 @@ function Carousel() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                 > */}
-                  <Image src={image1} className='image' />
+                <p>JavaScript - React, Redux, Node.js, Express, Vanila.js
+SketchUI, HTML, CSS
+Version Control / Git
+Databases: PostgreSQL, MongoDB Team Player, Positive Attitude</p>
+
+                  {/* <Image src={image1} className='image' /> */}
+
                   {/* <div className='title-carousel'>ARC</div> */}
                  
                 {/* </a> */}
