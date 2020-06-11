@@ -3,14 +3,24 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindowMinimize } from '@fortawesome/free-regular-svg-icons';
 import { useChain, useTransition, useSpring, config } from 'react-spring';
+import { useHistory } from 'react-router-dom';
 
+// import {ReactComponent as Logo} from '../img/logoSvg.svg';
 import Iam from '../components/Iam'
 import Carousel from '../components/Carousel'
 import { Container, Item } from '../components/styles'
 
 function Default() {
+  const history = useHistory()
   const compressIcon = <FontAwesomeIcon icon={faWindowMinimize} size='sm'/> 
-  const populate =  [{name: 'Bio', url: 'about'}, {name: 'Projects', url: 'projects'}, {name: 'Blog-ish', url: 'blog'}, {name: 'Contact', url: 'contact'}, {name: compressIcon}]
+  const populate =  [
+    {name: 'Bio', url: 'about'},
+    {name: 'Projects', url: 'projects'},
+    {name: 'Blog-ish', url: 'blog'},
+    {name: 'Contact', url: 'contact'},
+    {name: 'Playground', url: 'play'},
+    {name: compressIcon}
+  ]
 
   // below is animation for button menu:
   const [open, set ] = useState(false);
@@ -36,13 +46,18 @@ function Default() {
 
   return (
     <div className='content'>
+      
+      {/* <Logo className='logo' style={{
+        display: history.location.pathname === '/' ? '?' : 'none'
+      }}/> */}
+
       <div className='content-title'>
         <p>Full Stack Developer <br/> Experimenting with UI & UX </p>
         <Container className='content-title_button' style={{ ...rest, width: width, height: height }} onClick={() => set(open => !open)}>
           {transition.length === 0 ? '. . .' : ''}
           {transition.map(({ item, key, props }, i) => (
             <>
-              { i !== 4 ? (
+              { i !== 5 ? (
               <Link to={item.url} key={key} style={{textDecoration: 'none'}}>
                 <Item key={key} style={{ ...props}}> {item.name} </Item>
               </Link>) : 

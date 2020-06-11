@@ -9,11 +9,11 @@ import Work from './pages/Work';
 import Footer from './components/Footer';
 import './App.css';
 
-function App() {
+function App(prop) {
   return (
     <div className='main-container'>
           <Navbar />
-            <Fade 
+            <Fade
               delay={1000}
               duration={3000}
             >

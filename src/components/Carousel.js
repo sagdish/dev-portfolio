@@ -8,6 +8,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
+// import {ReactComponent as Logo} from '../img/logoSvg.svg'
 import image1 from '../img/one.png'
 import image2 from '../img/two.png'
 import image3 from '../img/three.png'
@@ -57,16 +58,16 @@ function Carousel() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                 > */}
-                <p>JavaScript - React, Redux, Node.js, Express, Vanila.js
-SketchUI, HTML, CSS
-Version Control / Git
-Databases: PostgreSQL, MongoDB Team Player, Positive Attitude</p>
-
+                <div className='title-carousel'>My Objective:</div>
+                <div className='carousel-text'>
+                  Engaging with projects that require me to work outside my comfort zone.
+                  I put great emphasis on UI and UX, I believe all functionality of the app is useless without proper real user engagement
+                </div>
                   {/* <Image src={image1} className='image' /> */}
 
-                  {/* <div className='title-carousel'>ARC</div> */}
                  
                 {/* </a> */}
+                  {/* <Logo /> */}
               </Slide>
               <Slide index={1} className='slide'>
                 {/* <a href="https://sf-spots.sagdi.now.sh/" 

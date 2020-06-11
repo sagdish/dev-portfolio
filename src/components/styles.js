@@ -17,12 +17,12 @@ const Container = styled(animated.div)`
 const Item = styled(animated.div)`
   // position: absolute;
   cursor: pointer;
-  width: 80%;
+  width: 100%;
   height: 45px;
   background: #343538;
   text-decoration: none;
   color: white;
-  font-size: 23px;
+  font-size: 20px;
   text-align: center;
   line-height: 45px;
   vertical-align: middle;

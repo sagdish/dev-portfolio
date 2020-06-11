@@ -8,12 +8,13 @@ import '../App.css'
 import photo from '../img/myPhoto.jpg'
 
 function About(props) {
+
   return (
     <Fade duration={2000} >
     <div className='content'>
       <div>
         <Link to='/' >
-          <FontAwesomeIcon icon={faChevronLeft} size='3x' className='back-btn' />
+          <FontAwesomeIcon icon={faChevronLeft} size='3x' className='back-btn'/>
         </Link>
       </div>
       <div className='content-title' style={{

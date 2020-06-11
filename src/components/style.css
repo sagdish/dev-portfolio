@@ -1,0 +1,38 @@
+/* logo animation: */
+#LogoWhite {
+  stroke: #DADADA;
+  stroke-dasharray: 850;
+  opacity: 1;
+  animation: animate 4s cubic-bezier(0,0.23,1,.1);
+  -moz-animation: animate 4s cubic-bezier(0,0.23,1,.1);
+  -webkit-animation: animate 4s cubic-bezier(0,0.23,1,.1);
+}
+
+@keyframes animate {
+  0% {
+      opacity: 0;
+      fill: none;
+      stroke-dashoffset: 850;
+  }
+
+  30% {
+      opacity: 10;
+      fill: none;
+      stroke-dashoffset: 850
+  }
+
+  94% {
+      opacity: 0.7;
+      fill: #DADADA;
+  }
+  100% {
+      opacity: 0.6;
+      /* fill: #DADADA; */
+      stroke-dashoffset: 0
+  }
+}
+
+.hideItem {
+  display: none;
+}
+
