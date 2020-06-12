@@ -184,7 +184,7 @@
 .slider-buttons_l {
   position: absolute;
   font-size: 30px;
-  top: 50%;
+  top: 45%;
   color: #A29E9E;
   background-color: transparent;
   border: none;
@@ -193,7 +193,7 @@
 .slider-buttons_r {
   position: absolute;
   font-size: 30px;
-  top: 50%;
+  top: 45%;
   right: 0%;
   color: #A29E9E;
   background-color: transparent;

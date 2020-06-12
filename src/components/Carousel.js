@@ -8,7 +8,8 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-// import {ReactComponent as Logo} from '../img/logoSvg.svg'
+import Stoic from './Stoic';
+import {ReactComponent as Logo} from '../img/logoSvgLg.svg'
 import image1 from '../img/one.png'
 import image2 from '../img/two.png'
 import image3 from '../img/three.png'
@@ -20,7 +21,8 @@ function Carousel() {
 
   const addAndRemove = () => {
     setAnimate(true)
-    console.log(animate)
+    console.log('here',animate)
+    
     setTimeout(() => {
       setAnimate(false)
       console.log(animate)
@@ -42,7 +44,7 @@ function Carousel() {
           totalSlides={4}
           currentSlide={slide}
           hasMasterSpinner={false}
-          // infinite
+          infinite={true}
         >
           {/* <h1 className="projectsName">Project name: {slide === 0 ? 
           ' Arc Registry' : ' SFspots'}</h1> */}
@@ -54,22 +56,33 @@ function Carousel() {
               }}
             >
               <Slide index={0} className='slide' >
-                {/* <a href="https://arcregistry.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                > */}
-                <div className='title-carousel'>My Objective:</div>
+                
+                <div className='carousel-text' style={{alignItems: 'center', 
+                  width: '280px',
+                  height: '90%',
+                  border: '1px solid white'
+                
+                }}>
+                  <Logo />
+                </div>
+               
+              </Slide>
+
+              <Slide index={1} className='slide' >
+                <Stoic />
+
+                {/* <div className='title-carousel'>My Objective:</div>
                 <div className='carousel-text'>
                   Engaging with projects that require me to work outside my comfort zone.
-                  I put great emphasis on UI and UX, I believe all functionality of the app is useless without proper real user engagement
-                </div>
+                  I believe all functionality of the app is useless without proper real user engagement
+                </div> */}
+
                   {/* <Image src={image1} className='image' /> */}
 
-                 
-                {/* </a> */}
+                
                   {/* <Logo /> */}
               </Slide>
-              <Slide index={1} className='slide'>
+              <Slide index={2} className='slide'>
                 {/* <a href="https://sf-spots.sagdi.now.sh/" 
                   target="_blank" 
                   rel="noopener noreferrer"  */}
@@ -78,7 +91,7 @@ function Carousel() {
                   {/* <div className='title-carousel'>San Francisco Study Spots</div> */}
                 {/* </a> */}
               </Slide>
-              <Slide index={2} className='slide'>
+              <Slide index={3} className='slide'>
                 {/* <a href="https://lyfe-logger-fe.herokuapp.com/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
@@ -87,7 +100,7 @@ function Carousel() {
 
                 {/* </a> */}
               </Slide>
-              <Slide index={3} className='slide'>
+              {/* <Slide index={3} className='slide'>
       
                   <div>
                     Open:
@@ -103,7 +116,7 @@ function Carousel() {
                     </Link>
                   </div>
 
-              </Slide>
+              </Slide> */}
             </Slider>
             <ButtonBack className='slider-buttons_l' 
               onClick={addAndRemove}

@@ -1,24 +1,24 @@
 /* logo animation: */
 #LogoWhite {
   stroke: #DADADA;
-  stroke-dasharray: 850;
-  opacity: 1;
-  animation: animate 4s cubic-bezier(0,0.23,1,.1);
-  -moz-animation: animate 4s cubic-bezier(0,0.23,1,.1);
-  -webkit-animation: animate 4s cubic-bezier(0,0.23,1,.1);
+  stroke-dasharray: 1500;
+  opacity: 0.7;
+  animation: animate 5s cubic-bezier(0,0.23,1,.1);
+  -moz-animation: animate 5s cubic-bezier(0,0.23,1,.1);
+  -webkit-animation: animate 5s cubic-bezier(0,0.23,1,.1);
 }
 
 @keyframes animate {
   0% {
       opacity: 0;
       fill: none;
-      stroke-dashoffset: 850;
+      stroke-dashoffset: 1500;
   }
 
   30% {
-      opacity: 10;
+      opacity: 0.7;
       fill: none;
-      stroke-dashoffset: 850
+      stroke-dashoffset: 1500
   }
 
   94% {
@@ -26,7 +26,7 @@
       fill: #DADADA;
   }
   100% {
-      opacity: 0.6;
+      opacity: 0.7;
       /* fill: #DADADA; */
       stroke-dashoffset: 0
   }
@@ -36,3 +36,18 @@
   display: none;
 }
 
+
+.card {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  /* max-width: 80%;
+  max-height: 90%; */
+  width: 80%;
+  height: 50%;
+  cursor: pointer;
+  will-change: transform, opacity;
+  border: 1px solid #DADADA;
+  font-size: 15px;
+  background-color: black;
+}

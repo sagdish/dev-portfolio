@@ -5,6 +5,7 @@ import { faWindowMinimize } from '@fortawesome/free-regular-svg-icons';
 import { useChain, useTransition, useSpring, config } from 'react-spring';
 import { useHistory } from 'react-router-dom';
 
+
 // import {ReactComponent as Logo} from '../img/logoSvg.svg';
 import Iam from '../components/Iam'
 import Carousel from '../components/Carousel'

@@ -9,7 +9,7 @@ function Navbar() {
   const history = useHistory();
   return (
     <div className='nav-bar'>
-      <Logo style={{
+      {/* <Logo style={{
         position: 'absolute',
         top: '15px',
         left: '3%',
@@ -17,7 +17,7 @@ function Navbar() {
         height: '50px',
         // border: '1px solid white'
         // display: history.location.pathname === '/' ? '?' : 'none'
-      }}/>
+      }}/> */}
       <div className='line'>
         <hr/>
       </div>
