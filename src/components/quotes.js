@@ -32,7 +32,7 @@ export const quotes = ["It is impossible for a man to learn what he thinks he al
 "You shouldn't give circumstances the power to rouse anger, for they don't care at all. - Marcus Aurelius",
 "Your mind will take the shape of what you frequently hold in thought. - Marcus Aurelius",
 "Your mind is truly yours. - Marcus Aurelius",
-"First tell yourself what kind of perosn you want to be, then do what you have to do. - Marcus Aurelius",
+"First tell yourself what kind of person you want to be, then do what you have to do. - Marcus Aurelius",
 "If you want some good, get it from yourself. - Epictetus",
 "Where is Good? In our reasoned choices. Where is evil? In our reasoned choices. Where is neither of them? Outside our reasoned choices. -Epictetus",
 "Let us also produce some blod act of our own & join the ranks of most emulated. - Seneca",
