@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
 import '../App.css'
@@ -12,6 +13,16 @@ function About(props) {
   return (
     <Fade duration={2000} >
     <div className='content'>
+      {/* first option to go back:  */}
+      {/* <div>
+          <FontAwesomeIcon 
+            icon={faChevronLeft} size='3x' 
+            className='back-btn' 
+            onClick={()=> history.goBack()}
+          />
+      </div> */}
+      
+      {/* second option, comment previos block to awoid redundancy */}
       <div>
         <Link to='/' >
           <FontAwesomeIcon icon={faChevronLeft} size='3x' className='back-btn'/>
