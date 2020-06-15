@@ -4,8 +4,8 @@
   stroke-dasharray: 1500;
   opacity: 0.8;
   animation: animate 5s cubic-bezier(0,0.23,1,.1);
-  -moz-animation: animate 5s cubic-bezier(0,0.23,1,.1);
   -webkit-animation: animate 5s cubic-bezier(0,0.23,1,.1);
+  -moz-animation: animate 5s cubic-bezier(0,0.23,1,.1);
 }
 
 @keyframes animate {
@@ -27,7 +27,7 @@
   }
   100% {
       opacity: 0.8;
-      /* fill: #DADADA; */
+      fill: #DADADA;
       stroke-dashoffset: 0
   }
 }
@@ -35,7 +35,6 @@
 .hideItem {
   display: none;
 }
-
 
 .card {
   display: flex;

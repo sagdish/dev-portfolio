@@ -10,9 +10,8 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import Stoic from './Stoic';
 import {ReactComponent as Logo} from '../img/logoSvgLg.svg'
-import image1 from '../img/one.png'
-import image2 from '../img/two.png'
-import image3 from '../img/three.png'
+import image1 from '../img/project1j.jpg'
+import image2 from '../img/project2j.jpg'
 import '../App.css'
 
 function Carousel() {
@@ -46,8 +45,6 @@ function Carousel() {
           hasMasterSpinner={false}
           infinite={true}
         >
-          {/* <h1 className="projectsName">Project name: {slide === 0 ? 
-          ' Arc Registry' : ' SFspots'}</h1> */}
           <div className='carousel'>
             <Slider className='slider'
               trayProps={{
@@ -56,67 +53,28 @@ function Carousel() {
               }}
             >
               <Slide index={0} className='slide' >
-                
-                <div className='carousel-text' style={{alignItems: 'center', 
+                <div className='carousel-text' style={{
+                  alignItems: 'center', 
                   width: '280px',
                   height: '90%',
                   border: '1px solid white'
-                
                 }}>
                   <Logo />
                 </div>
-               
               </Slide>
 
               <Slide index={1} className='slide' >
                 <Stoic />
-
-                {/* <div className='title-carousel'>My Objective:</div>
-                <div className='carousel-text'>
-                  Engaging with projects that require me to work outside my comfort zone.
-                  I believe all functionality of the app is useless without proper real user engagement
-                </div> */}
-
-                  {/* <Image src={image1} className='image' /> */}
-
-                
-                  {/* <Logo /> */}
               </Slide>
+
               <Slide index={2} className='slide'>
-                {/* <a href="https://sf-spots.sagdi.now.sh/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"  */}
-                
-                  <Image src={image2} className='image' />
-                  {/* <div className='title-carousel'>San Francisco Study Spots</div> */}
-                {/* </a> */}
+                  <Image src={image1} className='image' />
               </Slide>
+
               <Slide index={3} className='slide'>
-                {/* <a href="https://lyfe-logger-fe.herokuapp.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                > */}
-                  <Image src={image3} className='image' />
-
-                {/* </a> */}
+                  <Image src={image2} className='image' />
               </Slide>
-              {/* <Slide index={3} className='slide'>
-      
-                  <div>
-                    Open:
-                    <br/>
-                    <button>
-                      Projects
-                    </button>
-                    <br/>
-                    <Link to='/about'>
-                      <button>
-                        About
-                      </button>
-                    </Link>
-                  </div>
 
-              </Slide> */}
             </Slider>
             <ButtonBack className='slider-buttons_l' 
               onClick={addAndRemove}
