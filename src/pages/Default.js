@@ -4,9 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindowMinimize } from '@fortawesome/free-regular-svg-icons';
 import { useChain, useTransition, useSpring, config } from 'react-spring';
 import { useHistory } from 'react-router-dom';
+import { useMediaPredicate } from 'react-media-hook';
 
-
-// import {ReactComponent as Logo} from '../img/logoSvg.svg';
 import Iam from '../components/Iam'
 import Carousel from '../components/Carousel'
 import { Container, Item } from '../components/styles'
@@ -23,6 +22,10 @@ function Default() {
     {name: compressIcon}
   ]
 
+  //listener to change multi-function button:
+  const smallScreen = useMediaPredicate('(max-width: 1149px)')
+  // console.log(smallScreen)
+
   // below is animation for button menu:
   const [open, set ] = useState(false);
   const springRef = useRef();
@@ -30,7 +33,10 @@ function Default() {
     ref: springRef,
     config: config.default,
     from: { width: '100px', height: '45px', background: '#212224'},
-    to: { width: open ? '400px' : '100px', height: open ? '160px' : '45px'}
+    to: { 
+          width: open ? (smallScreen ? '250px' : '400px') : '100px',
+          height: open ? (smallScreen ? '260px' : '160px') : '45px',
+        }
   })
 
   const transRef = useRef()
@@ -47,10 +53,6 @@ function Default() {
 
   return (
     <div className='content'>
-      
-      {/* <Logo className='logo' style={{
-        display: history.location.pathname === '/' ? '?' : 'none'
-      }}/> */}
 
       <div className='content-title'>
         <p>Full Stack Developer <br/> Experimenting with UI & UX </p>

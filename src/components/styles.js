@@ -12,6 +12,11 @@ const Container = styled(animated.div)`
   box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
   will-change: width, height;
   // border: 0.5px solid #ffffff;
+  @media (max-width: 1149px) {
+    grid-template-columns: repeat(2, minmax(80px, 1fr));
+    will-change: width, height;
+    padding: 20px;
+  }
 `
 
 const Item = styled(animated.div)`
@@ -29,6 +34,11 @@ const Item = styled(animated.div)`
   border-radius: 5px;
   will-change: transform, opacity;
   // border: 1px solid red;
+
+  @media (max-width: 1149px) {
+    font-size: 18px;
+    width: 100%;
+  }
 `
 
 export { Container, Item }

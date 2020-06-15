@@ -33,7 +33,7 @@ function Stoic(props) {
       <div style={{fontSize:'20px', marginTop: '5%', fontWeight: 'lighter'}}>
         Stoic Quote for you:
         <br/>
-        <p style={{fontSize: '10px',
+        <p style={{fontSize: '12px',
                     fontWeight: 'lighter',
                     marginTop: '15px',
                     marginLeft: '50%',
