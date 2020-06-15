@@ -18,8 +18,8 @@
 .blog-entry {
   display: flex;
   flex-direction: column;
-  margin: 3%;
-  margin-left: 10%;
+  margin: 3% 7% 3% 10%;
+  /* margin-left: 10%; */
   font-size: 20px;
   font-weight: lighter;
   text-align: justify;

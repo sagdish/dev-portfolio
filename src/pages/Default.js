@@ -35,7 +35,7 @@ function Default() {
     from: { width: '100px', height: '45px', background: '#212224'},
     to: { 
           width: open ? (smallScreen ? '250px' : '400px') : '100px',
-          height: open ? (smallScreen ? '260px' : '160px') : '45px',
+          height: open ? (smallScreen ? '250px' : '160px') : '45px',
         }
   })
 
