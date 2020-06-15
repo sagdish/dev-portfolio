@@ -20,7 +20,7 @@ function Work(props) {
         // width: 'auto',
         border: '1px solid white',
       }}>
-        In Progres...
+        In Progress...
       </div>
 
       <div className='content-title' style={{

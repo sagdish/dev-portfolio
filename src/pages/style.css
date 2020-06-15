@@ -1,0 +1,31 @@
+.blog-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* border: 1px solid yellow; */
+}
+
+.back-btn-blog {
+  /* position: -webkit-sticky; */
+  position: sticky;
+  top: 10%;
+  left: 3%;
+  /* border: 1px solid red; */
+  color: #DADADA;
+}
+
+.blog-entry {
+  display: flex;
+  flex-direction: column;
+  margin: 3% 7% 3% 10%;
+  /* margin-left: 10%; */
+  font-size: 20px;
+  font-weight: lighter;
+  text-align: justify;
+  line-height: 1.5;
+}
+.blog-entry h2 {
+  font-weight: lighter;
+  margin-bottom: 17px;
+}

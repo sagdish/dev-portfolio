@@ -15,11 +15,12 @@
   background-image: url('img/bigmainBG.jpg');
   /* border: 1px solid green; */
   padding-bottom: 100px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 /* navbar styles */
 .nav-bar {
+  /* position: relative; */
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -111,7 +112,10 @@
   /* opacity: 0;
   transition: opacity 2s;
   opacity: 1; */
-  /* border: 2px solid #343538 */
+  background-color: rgba(33, 34, 36, 0.9);
+  /* border: 1px solid #343538; */
+  box-shadow: 4px 5px 27px -12px rgba(0,0,0,0.7);
+
 }
 
 .projectsName {
@@ -133,17 +137,15 @@
   text-align: center;
   /* border: 1px solid #353639; */
   border-radius: 1%;
-  ;
 }
 
 .image {
   width: 95%;
   height: 95%;
   margin: 1.5% auto;
-  position: relative;
   opacity: 0.7;
   transition: all 0.3s linear 0.1s;
-  box-shadow: 2px 31px 15px -8px rgba(0,0,0,0.61);
+  /* border: 1px solid pink; */
 }
 
 .image:hover {
@@ -153,19 +155,37 @@
 
 .title-carousel {
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: lighter;
-  position: absolute;
-  top: 5%;
-  right: 47%;
-  box-shadow: -10px 7px 9px 1px rgba(0,0,0,0.75);
-  /* border: 1px solid red; */
+  text-align: center;
+  margin: 7% auto 5%;
+}
+
+.carousel-text {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: space-around;
+  width: 93%;
+  height: 95%;
+  margin: 1.5% auto;
+  padding: 20px;
+  position: relative;
+  opacity: 0.7;
+  font-size: 23px;
+  font-weight: lighter;
+  text-align: justify;
+  transition: all 0.2s linear 0.1s;
+  /* border: 1px solid pink; */
+}
+.carousel-text:hover {
+  opacity: 1;
+  transition: all 0.3s linear 0.1s;
 }
 
 .slider-buttons_l {
   position: absolute;
   font-size: 30px;
-  top: 50%;
+  top: 45%;
   color: #A29E9E;
   background-color: transparent;
   border: none;
@@ -174,7 +194,7 @@
 .slider-buttons_r {
   position: absolute;
   font-size: 30px;
-  top: 50%;
+  top: 45%;
   right: 0%;
   color: #A29E9E;
   background-color: transparent;
@@ -241,6 +261,7 @@
   font-weight: lighter;
   /* font-size: 57px; */
   font-size: 5.7rem;
+  opacity: 0.8;
   /* margin-bottom: 30px; */
   /* border: 1px solid yellow; */
 }
@@ -317,7 +338,6 @@
 
 }
 
-
 @media only screen and (max-width: 500px) {
   .carousel {
     min-width: 300px;
@@ -326,5 +346,16 @@
     width: 95vw;
   }
 
+  .card {
+    font-size: 18px;
+  }
+
 }
 
+.logo {
+  position: absolute;
+  top: 2px;
+  left: 3%;
+  width:40px;
+  /* border: 1px solid white; */
+}
