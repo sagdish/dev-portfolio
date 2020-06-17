@@ -20,15 +20,30 @@ function Work(props) {
           </Link>
         </div>
     
-        <div className='content-title'>           
-         placeholder
+        <div className='content-title'>
+          <div className="box">
+
+            SF Study Spots
+          </div>
         </div>
 
         <div className='content-title' style={{
           // fontSize: '23px',
           // border: '1px solid white'
         }}>
-          placeholder
+          LifeLogger
+        </div>
+        <div className='content-title' style={{
+          // fontSize: '23px',
+          // border: '1px solid white'
+        }}>
+          GraphQL server
+        </div>
+        <div className='content-title' style={{
+          // fontSize: '23px',
+          // border: '1px solid white'
+        }}>
+          ARC registry
         </div>
         
       </div>

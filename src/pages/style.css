@@ -39,6 +39,12 @@
   margin-bottom: 17px;
 }
 
+.box {
+  width: 100%;
+  height: auto;
+  border: 1px solid purple;
+}
+
 @media only screen and (max-width: 850px) {
   .pages-content { 
     flex-flow: column wrap;
