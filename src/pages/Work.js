@@ -4,7 +4,10 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
-import sfspot from '../img/MainLogo.png'
+import arc from '../img/arc-logo.png'
+import graphql from '../img/graphql-logo.png'
+import lifeLogger from '../img/logo.png'
+import sfspot from '../img/SF.png'
 import './style.css'
 import '../App.css'
 
@@ -20,37 +23,66 @@ function Work(props) {
             <FontAwesomeIcon icon={faChevronLeft} size='3x' />
           </Link>
         </div>
-    
+
         <div className='box'>
-        <img src={sfspot} alt='' style={{
-            height: 'auto',
-            width: '70%',
-            // border: '1px solid white',
-            // borderRadius: '5%',
-            // boxShadow: '7px 13px 29px -8px rgba(0,0,0,0.75)',
-            alignSelf: 'center'
-          }}/>
-            {/* SF Study Spots */}
-        
+          <div className='box-in'>
+            <img src={graphql} alt='' className='box-in' style={{
+              height: 'auto',
+              width: '35%',
+              alignSelf: 'center',
+              marginBottom: '2%'
+            }}/>
+            GraphQL server
+            <div className='box-text'>
+              GraphQL-Yoga, JSONwebtokens, Bcrypt, Prisma ...
+            </div>
+          </div>
         </div>
 
-        <div className='box' style={{
-          // fontSize: '23px',
-          // border: '1px solid white'
-        }}>
-          LifeLogger
+        <div className='box'>
+          <div className='box-in'>
+            <img src={lifeLogger} alt='' style={{
+              height: 'auto',
+              width: '25%',
+              alignSelf: 'center',
+              marginBottom: '2%'
+            }}/>
+            Life Logger
+            <div className='box-text'>
+                PostgreSQL, React, Redux, Express, Node ...
+            </div>
+          </div>
         </div>
-        <div className='box' style={{
-          // fontSize: '23px',
-          // border: '1px solid white'
-        }}>
-          GraphQL server
+
+        <div className='box'>
+          <div className='box-in'>
+            <img src={sfspot} alt='' style={{
+                height: 'auto',
+                width: '60%',
+                // border: '1px solid white',
+                // borderRadius: '5%',
+                // boxShadow: '7px 13px 29px -8px rgba(0,0,0,0.75)',
+                alignSelf: 'center'
+            }}/>
+            <div className='box-text'>
+              MongoDB, React, Express, Node ...
+            </div>
+
+          </div>
         </div>
-        <div className='box' style={{
-          // fontSize: '23px',
-          // border: '1px solid white'
-        }}>
-          ARC registry
+
+        <div className='box'>
+          <div className='box-in'>
+            <img src={arc} alt='' className='box-in' style={{
+              height: 'auto',
+              width: '45%',
+              alignSelf: 'center',
+              marginBottom: '5%'
+            }}/>
+            <div className='box-text'>
+              React, Bootstrap4 UI ...
+            </div>
+          </div>
         </div>
         
       </div>
