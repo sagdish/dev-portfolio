@@ -11,8 +11,9 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  width: 90vw;
+  /* width: 90vw; */
   border: 1px solid white;
+  /* align-self: center; */
 }
 
 .back-btn-blog {
@@ -21,6 +22,7 @@
   top: 10%;
   left: 3%;
   /* border: 1px solid red; */
+  margin-left: -20px;
   color: #DADADA;
 }
 
@@ -40,13 +42,20 @@
 }
 
 .box {
-  width: 100%;
-  height: auto;
+  display: flex;
+  width: 40%;
+  height: 40vh;
+  font-size: 25px;
+  font-weight: lighter;
   border: 1px solid purple;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 850px) {
   .pages-content { 
     flex-flow: column wrap;
+  }
+  .box {
+    width: 80%;
   }
 }
