@@ -87,7 +87,7 @@
   width: 40%;
   padding: 30px;
   margin: auto 20px;
-  border: 1px solid lawngreen;
+  /* border: 1px solid lawngreen; */
 }
 .content-title_button {
   align-self: flex-end;
@@ -300,12 +300,16 @@
     font-size: 18px;
     padding-right: 10px;
   }
+
+  .back-btn {
+    margin-left: 30px;
+  }
   .content {
     /* height: 90vh; */
     min-height: 750px;
   }
   .content-title {
-    width: 100%;
+    width: 95%;
   }
   .content-carousel {
     width: 88vw;

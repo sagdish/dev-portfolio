@@ -25,7 +25,7 @@ function About(props) {
         <div className='content-title'>           
           <img src={photo} alt='' style={{
             height: 'auto',
-            width: '40vh',
+            width: '35vh',
             borderRadius: '5%',
             boxShadow: '7px 13px 29px -8px rgba(0,0,0,0.75)',
             alignSelf: 'center'
