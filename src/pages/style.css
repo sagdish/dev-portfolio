@@ -6,9 +6,18 @@
   /* border: 1px solid yellow; */
 }
 
+.pages-content {
+  margin-top: 70px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 90vw;
+  border: 1px solid white;
+}
+
 .back-btn-blog {
-  /* position: -webkit-sticky; */
   position: sticky;
+  position: -webkit-sticky;
   top: 10%;
   left: 3%;
   /* border: 1px solid red; */
@@ -28,4 +37,10 @@
 .blog-entry h2 {
   font-weight: lighter;
   margin-bottom: 17px;
+}
+
+@media only screen and (max-width: 850px) {
+  .pages-content { 
+    flex-flow: column wrap;
+  }
 }
