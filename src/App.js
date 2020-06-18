@@ -7,6 +7,7 @@ import Default from './pages/Default';
 import About from './pages/About';
 import Work from './pages/Work';
 import Blog from './pages/Blog';
+import Play from './pages/Play';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -19,6 +20,7 @@ function App(prop) {
           <Route path='/about' component={ About } />
           <Route path='/projects' component={ Work } />
           <Route path='/blog' component={ Blog } />
+          <Route path='/play' component={ Play } />
         </Fade>
       <Footer />
     </div>

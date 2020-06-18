@@ -26,7 +26,7 @@ function Work(props) {
 
         <div className='box'>
           <div className='box-in'>
-            <img src={graphql} alt='' className='box-in' style={{
+            <img src={graphql} alt='' style={{
               height: 'auto',
               width: '35%',
               alignSelf: 'center',
