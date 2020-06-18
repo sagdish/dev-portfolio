@@ -51,6 +51,7 @@
   /* border: 1px solid purple; */
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   /* transition: all 0.3s ease; */
   /* background-color: #212224;
   margin: 1%; */
@@ -66,9 +67,13 @@
 .box-in {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   opacity: 0.7;
   transition: all 0.5s ease;
+  /* border: 1px dashed white; */
+  width: 70%;
+  /* width: 80%; */
 }
 
 .box-in:hover {
