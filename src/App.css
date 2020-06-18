@@ -39,11 +39,14 @@
   /* border: 1px solid magenta; */
   width: 50%;
   margin-bottom: 5px;
+  align-self: center;
+  opacity: 0.8;
 }
 
 .pages-title h3 {
   font-weight: lighter;
-  font-size: 27px;
+  font-size: 23px;
+  color:  #DADADA;
 }
 
 .nav-bar .line {
@@ -67,10 +70,15 @@
 }
 
 .back-btn {
-  margin-top: 60px;
-  /* border: 1px solid red; */
+  position: sticky;
+  position: -webkit-sticky;
+  top: 10%;
+  left: 5%;
   color: #DADADA;
-  cursor: pointer;
+  /* display: flex; */
+  /* margin-top: 60px;
+  color: #DADADA;
+  cursor: pointer; */
 }
 
 .content-title {
@@ -295,12 +303,16 @@
     font-size: 18px;
     padding-right: 10px;
   }
+
+  .back-btn {
+    margin-left: 30px;
+  }
   .content {
-    height: 90vh;
+    /* height: 90vh; */
     min-height: 750px;
   }
   .content-title {
-    width: 100%;
+    width: 95%;
   }
   .content-carousel {
     width: 88vw;

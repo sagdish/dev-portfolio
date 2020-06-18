@@ -25,7 +25,7 @@ function Blog(props) {
             <br/> I do intermittent and alternate day fasting. For the last half year my journey into it is uneasy and rewarding at the same time.
             <br/> Music I listen: Chillout/Ambient trance, Deep House, Vocal Trance and Deep Disco. Well you got an idea.
             <br/>Check this playlist for chill and relaxed time: &nbsp;
-            <a href='https://www.youtube.com/watch?v=--kZEdjXcEI&list=PL2XLdOlrcUgqiuT4iXIWhGftP3nT-OiT1' 
+            <a href='https://www.youtube.com/watch?v=VjAxlcJgKGY&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMVjAxlcJgKGY&index=1' 
               target='_blank'
               rel="noopener noreferrer"
               style={{color: 'inherit'}}
