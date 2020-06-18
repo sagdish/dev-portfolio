@@ -6,12 +6,10 @@ import { useChain, useTransition, useSpring, config } from 'react-spring';
 import { useHistory } from 'react-router-dom';
 import { useMediaPredicate } from 'react-media-hook';
 
-import Iam from '../components/Iam'
 import Carousel from '../components/Carousel'
 import { Container, Item } from '../components/styles'
 
 function Default() {
-  const history = useHistory()
   const compressIcon = <FontAwesomeIcon icon={faWindowMinimize} size='sm'/> 
   const populate =  [
     {name: 'Bio', url: 'about'},
@@ -70,7 +68,7 @@ function Default() {
           ))}
         </Container>
       </div>
-      {/* <Iam /> */}
+
       <Carousel />
     </div>
   );

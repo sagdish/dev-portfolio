@@ -24,7 +24,7 @@ function Work(props) {
         <div style={{position: 'relative', display: 'flex', justifyContent: 'center'}}>
           <div style={{
             position: 'absolute',
-            top: '20%',
+            top: '18%',
             left: '25%',
             fontSize: '26px',
             fontWeight: 'lighter',
@@ -34,18 +34,11 @@ function Work(props) {
           </div>
           <img src={thinking} alt='' style={{
               height: 'auto',
-              width: '70%',
+              width: '60%',
               alignSelf: 'center',
             }}/>
         </div>
 
-
-        
-
-        
-
-        
-        
       </div>
     </Fade>
   );

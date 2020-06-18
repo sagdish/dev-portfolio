@@ -1,8 +1,10 @@
 import React from 'react';
+import { useLocation, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 function Footer(props) {
+  const location = useLocation();
   return (
     <div className='footer'>
       <div className='footer-social'>
@@ -35,9 +37,19 @@ function Footer(props) {
         </a>
 
       </div>
-      <div className='footer-name'>
-        SAGDI FORMANOV
-      </div>
+
+      {location.pathname === '/' ? (<div className='footer-name'>
+          SAGDI FORMANOV
+        </div>) :
+        (<div className='pages-title'>
+          <Link style={{textDecoration: 'none'}} to='/about'><h3>Bio</h3></Link>
+          <Link style={{textDecoration: 'none'}} to='/projects'><h3>Projects</h3></Link>
+          <Link style={{textDecoration: 'none'}} to='/blog'><h3>Blog</h3></Link>
+          <Link style={{textDecoration: 'none'}} to='/contact'><h3>Contact</h3></Link>
+        </div>)
+      }
+
+      
       
     </div>
   );

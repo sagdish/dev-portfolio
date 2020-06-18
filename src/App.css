@@ -39,11 +39,14 @@
   /* border: 1px solid magenta; */
   width: 50%;
   margin-bottom: 5px;
+  align-self: center;
+  opacity: 0.8;
 }
 
 .pages-title h3 {
   font-weight: lighter;
-  font-size: 27px;
+  font-size: 23px;
+  color:  #DADADA;
 }
 
 .nav-bar .line {
