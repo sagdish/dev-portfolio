@@ -28,9 +28,10 @@ function Work(props) {
           <div className='box-in'>
             <img src={graphql} alt='' style={{
               height: 'auto',
-              width: '35%',
+              width: '50%',
               alignSelf: 'center',
-              marginBottom: '2%'
+              marginBottom: '2%',
+              // border: '1px solid blue'
             }}/>
             GraphQL server
             <div className='box-text'>
@@ -43,7 +44,7 @@ function Work(props) {
           <div className='box-in'>
             <img src={lifeLogger} alt='' style={{
               height: 'auto',
-              width: '25%',
+              width: '36%',
               alignSelf: 'center',
               marginBottom: '2%'
             }}/>
@@ -58,7 +59,7 @@ function Work(props) {
           <div className='box-in'>
             <img src={sfspot} alt='' style={{
                 height: 'auto',
-                width: '60%',
+                width: '83%',
                 // border: '1px solid white',
                 // borderRadius: '5%',
                 // boxShadow: '7px 13px 29px -8px rgba(0,0,0,0.75)',
@@ -75,9 +76,9 @@ function Work(props) {
           <div className='box-in'>
             <img src={arc} alt='' className='box-in' style={{
               height: 'auto',
-              width: '45%',
+              width: '60%',
               alignSelf: 'center',
-              marginBottom: '5%'
+              // marginBottom: '5%'
             }}/>
             <div className='box-text'>
               React, Bootstrap4 UI ...
