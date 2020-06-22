@@ -20,7 +20,7 @@ function Blog(props) {
         <div className='blog-entry' style={{marginTop: '100px'}}>
           <h2>Quick facts about me</h2>
           <p>I embrace concept of Stoic philosophy. It teaches us how to live virtuously and be better humans.
-            No wonder that one of my favorite books is 'Meditations' by Marcus Aurelius.
+            No wonder that one of my favorite books is <i>Meditations</i> by Marcus Aurelius.
             <br/> Check out Stoic quote generator I did on the main page (second slide in carousel window).
             <br/> I do intermittent and alternate day fasting. For the last half year my journey into it is uneasy and rewarding at the same time.
             <br/> Music I listen: Chillout/Ambient trance, Deep House, Vocal Trance and Deep Disco. Well you got an idea.
