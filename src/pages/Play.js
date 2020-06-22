@@ -24,13 +24,16 @@ function Work(props) {
         <div style={{position: 'relative', display: 'flex', justifyContent: 'center'}}>
           <div style={{
             position: 'absolute',
-            top: '18%',
+            top: '15%',
             left: '25%',
             fontSize: '26px',
             fontWeight: 'lighter',
           }}>
             Shhhhh... <br/> 
-            You didn't see this. It is still under development
+            You didn't see this. It is still under development.
+            <br/>
+            <br/>
+            This will be the place for random collection of useful code, or some interesting components. Stay tuned.
           </div>
           <img src={thinking} alt='' style={{
               height: 'auto',

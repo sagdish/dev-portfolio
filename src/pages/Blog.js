@@ -24,13 +24,13 @@ function Blog(props) {
             <br/> Check out Stoic quote generator I did on the main page (second slide in carousel window).
             <br/> I do intermittent and alternate day fasting. For the last half year my journey into it is uneasy and rewarding at the same time.
             <br/> Music I listen: Chillout/Ambient trance, Deep House, Vocal Trance and Deep Disco. Well you got an idea.
-            <br/>Check this playlist for chill and relaxed time: &nbsp;
+            <br/>Check this playlist for chill and relaxed time: &nbsp;{' '}
             <a href='https://www.youtube.com/watch?v=VjAxlcJgKGY&list=RDGMEMYH9CUrFO7CfLJpaD7UR85wVMVjAxlcJgKGY&index=1' 
               target='_blank'
               rel="noopener noreferrer"
               style={{color: 'inherit'}}
             >
-             {' '} youtube playlist.
+              youtube playlist.
             </a> 
           </p>
         </div>
@@ -41,7 +41,15 @@ function Blog(props) {
             Code editor: &nbsp; Visual Studio Code. <br/>
             UI&UX: I do my wireframes and UI on Sketch. Figma is a big hit now, so I will probably switch to it, 
             since my Sketch license is expired so I stuck in year old buggy version.
-            <br/>📸 - Nikon
+            <br/>📸 - Nikon &ensp; Yeah, I shoot on DSLR, maybe I should add page with my photography work here. If you interested in the meantime
+            check old and forgotten Flickr, where some of my work {' '}
+            <a href='https://www.flickr.com/photos/96815544@N05/albums/72157714812168558/with/8921632196/' 
+              target='_blank'
+              rel="noopener noreferrer"
+              style={{color: 'inherit'}}>
+              live
+              </a>
+
             </p>
         </div>
 
