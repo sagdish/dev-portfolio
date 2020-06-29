@@ -53,7 +53,7 @@ function Stoic(props) {
         <a.div 
           className='card'
           style= {{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}
-          >
+        >
           {quotesList[random]}
         </a.div>
       </div>
