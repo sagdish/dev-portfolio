@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
@@ -36,6 +36,13 @@ function Work(props) {
             GraphQL server
             <div className='box-text'>
               GraphQL-Yoga, JSONwebtokens, Bcrypt, Prisma ...
+              <div className='btn-overText'>
+                <Link to='#' style={{
+                  // color: '#DADADA',
+                }}>
+                  <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
+                </Link> 
+              </div>
             </div>
           </div>
         </div>
@@ -51,6 +58,13 @@ function Work(props) {
             Life Logger
             <div className='box-text'>
                 PostgreSQL, React, Redux, Express, Node ...
+              <div className='btn-overText'>
+                <Link to='#' style={{
+                  // color: '#DADADA',
+                }}>
+                  <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
+                </Link> 
+              </div>
             </div>
           </div>
         </div>
@@ -67,6 +81,15 @@ function Work(props) {
             }}/>
             <div className='box-text'>
               MongoDB, React, Express, Node ...
+              <div className='btn-overText' style={{
+                bottom: '3%'
+              }}>
+                <Link to='#' style={{
+                  // color: '#DADADA',
+                }}>
+                  <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
+                </Link> 
+              </div>
             </div>
 
           </div>
@@ -74,7 +97,7 @@ function Work(props) {
 
         <div className='box'>
           <div className='box-in'>
-            <img src={arc} alt='' className='box-in' style={{
+            <img src={arc} alt='' style={{
               height: 'auto',
               width: '60%',
               alignSelf: 'center',
@@ -82,6 +105,13 @@ function Work(props) {
             }}/>
             <div className='box-text'>
               React, Bootstrap4 UI ...
+              <div className='btn-overText'>
+                <Link to='#' style={{
+                  // color: '#DADADA',
+                }}>
+                  <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
+                </Link> 
+              </div>
             </div>
           </div>
         </div>

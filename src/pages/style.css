@@ -59,9 +59,23 @@
 
 .box-text {
   margin-top: 10px;
+  display: flex;
+  /* position: relative; */
+  /* flex-direction: column; */
+  justify-content: center;
   opacity: 0;
   transition: all 0.5s ease;
-  font-size: 14px;
+  font-size: 16px;
+}
+.btn-overText {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 80px;
+  height: 40px;
+  /* background-color: #212224; */
+  /* color: #fff; */
+  /* border: 1px solid gray; */
 }
 
 .box-in {
@@ -74,12 +88,14 @@
   /* border: 1px dashed white; */
   width: 70%;
   /* width: 80%; */
+  position: relative;
 }
 
 .box-in:hover {
   transform: scale(1.1);
   transition-duration: 0.5s;
   opacity: 1;
+  font-size: 14px;
 }
 
 .box-in:hover .box-text {
@@ -87,6 +103,13 @@
   transition-duration: 0.5s;
 }
 
+/* change default color of link: */
+a {
+  color: #d8d8d8;
+}
+a:hover {
+   color: #47CDDA
+}
 
 
 @media only screen and (max-width: 850px) {
@@ -96,5 +119,8 @@
   }
   .box {
     width: 80%;
+  }
+  .box-text {
+    opacity: 0.7;
   }
 }
