@@ -247,6 +247,7 @@
   width: 100vw;
   bottom: 0;
   height: 100px;
+  margin-bottom: 5px;
   /* border: 1px solid red; */
 }
 
@@ -370,7 +371,7 @@
   }
 
   .pages-title {
-    width: auto;
+    width: 90%;
   }
 
 }

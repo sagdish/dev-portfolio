@@ -14,7 +14,7 @@ function Stoic(props) {
   const [flipped, setFlip] = useState(false)
   const { transform, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
-    transform: `perspective(300px) rotateX(${flipped ? 180 : 0}deg)`,
+    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
     config: { mass: 2, tension: 500, friction: 110 }
   });
   // let i = 1;
