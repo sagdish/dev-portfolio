@@ -78,7 +78,7 @@
 .container {
   position: absolute;
   top: 10%;
-  left: 50%;
+  left: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,4 +125,12 @@
   .card {
     font-size: 18px;
   }
+  .clock {
+    width: 200px;
+    height: 200px;
+  }
+  .container {
+    left: 25%;
+  }
+
 }

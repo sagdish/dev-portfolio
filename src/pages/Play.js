@@ -63,7 +63,7 @@ function Work(props) {
 
           {/* this will be future container for another fun thing */}
           <div style={{
-            marginTop: '20%',
+            marginTop: '70px',
             display: 'flex',
             // width: '80%',
             height: '400px',
