@@ -44,7 +44,7 @@ function Work(props) {
             
             He is still waiting for her ... 
             <br/>
-            <small><i>(The clock above is ticking)</i></small>
+            {/* <small><i>(The clock above is ticking)</i></small> */}
           </div>
           
           <img src={thinking} alt='' style={{

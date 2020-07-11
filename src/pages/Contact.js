@@ -34,7 +34,7 @@ function Contact(props) {
            <br/>
            sagdish@gmail.com 
            <br/>
-           or Linkedin 
+           or Linkedin <small><i>(link in the footer)</i></small>
           </div>
           <img src={thinking} alt='' style={{
               height: 'auto',
