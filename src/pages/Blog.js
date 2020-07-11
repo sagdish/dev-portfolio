@@ -67,7 +67,7 @@ function Blog(props) {
         </div>
 
         <div className='blog-entry'>
-          <h2>About the bike trip</h2>
+          <h2>About one bike trip</h2>
           <p>
             After falling off the bike in Downtown SF I think I learnt few things. Sometimes things happen to us when possibilty is minimal or we too relaxed.
             I biked this day from Northbay to SF, climbing up the hills about 300 feet height, making through Golden Gate Bridge during strong cross-wind.

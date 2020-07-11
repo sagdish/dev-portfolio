@@ -82,7 +82,7 @@ function Work(props) {
             <div className='box-text'>
               MongoDB, React, Express, Node ...
               <div className='btn-overText' style={{
-                bottom: '3%'
+                bottom: '40%'
               }}>
                 <Link to='#' style={{
                   // color: '#DADADA',
