@@ -42,7 +42,7 @@ function Work(props) {
           <div className='laptopImage'>
             <div style={{
               position: 'absolute',
-              top: '27%',
+              top: '17%',
               right: '5%',
               fontSize: '19px',
               fontWeight: 'lighter',
@@ -54,9 +54,9 @@ function Work(props) {
             </div>
             
             <img src={thinking} alt='' style={{
-                height: 'auto',
-                width: '60%',
-                alignSelf: 'center',
+              height: 'auto',
+              width: '60%',
+              alignSelf: 'center',
             }}/>
           </div>
 
