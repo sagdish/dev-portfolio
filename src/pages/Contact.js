@@ -29,22 +29,24 @@ function Contact(props) {
           }}>
           <div style={{
             // position: 'absolute',
-            top: '16%',
+            top: '26%',
             left: '25%',
-            fontSize: '27px',
+            fontSize: '26px',
             fontWeight: 'lighter',
+            lineHeight: '1.8',
+            marginBottom: '20px'
           }}>
            Best to reach me at: 
-           <br/> 
            <br/>
            sagdish@gmail.com 
            <br/>
-           or Linkedin <small><i>(link in the footer)</i></small>
+           <small>or Linkedin <i>(link in the footer)</i></small>
           </div>
           <img src={mail_box} alt='' style={{
               height: 'auto',
               width: '40%',
               alignSelf: 'center',
+              marginLeft: '10%'
             }}/>
         </div>
       </div>
