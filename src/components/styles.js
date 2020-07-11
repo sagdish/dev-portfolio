@@ -27,7 +27,7 @@ const Item = styled(animated.div)`
   background: #343538;
   text-decoration: none;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   line-height: 45px;
   vertical-align: middle;
@@ -36,8 +36,8 @@ const Item = styled(animated.div)`
   // border: 1px solid red;
 
   @media (max-width: 1149px) {
-    font-size: 18px;
-    width: 100%;
+    font-size: 17px;
+    width: 106%;
   }
 `
 
