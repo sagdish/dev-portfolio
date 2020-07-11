@@ -111,9 +111,6 @@ a:hover {
    color: #47CDDA
 }
 
-.laptopImage {
-  /* visibility: hidden; */
-}
 
 @media only screen and (max-width: 850px) {
   .pages-content { 
@@ -130,5 +127,11 @@ a:hover {
     top: 9%;
     right: 1%;
    
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .laptopImage {
+    visibility: hidden;
   }
 }

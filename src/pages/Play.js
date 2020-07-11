@@ -32,7 +32,8 @@ function Work(props) {
           <div style={{
             alignSelf: 'center',
             fontWeight: 'lighter',
-            fontSize: '20px'
+            fontSize: '20px',
+            marginTop: '20px'
           }}>
             JavaScript Analogue Clock
           </div>
@@ -62,12 +63,12 @@ function Work(props) {
 
           {/* this will be future container for another fun thing */}
           <div style={{
-            marginTop: '40px',
+            marginTop: '20%',
             display: 'flex',
-            // width: '0%',
+            // width: '80%',
             height: '400px',
             justifyContent: 'center',
-            border: '1px solid red',
+            // border: '1px solid red',
             position: 'relative',
           }}>
             
@@ -75,6 +76,11 @@ function Work(props) {
             {/* <p>as seen </p> */}
             <Stoic />
           </div>
+
+          {/* next box: */}
+          {/* <div>
+            <h2>future box</h2>
+          </div> */}
 
         </div>
 
