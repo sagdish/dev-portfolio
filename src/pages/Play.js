@@ -26,8 +26,7 @@ function Work(props) {
 
         <div style={{position: 'relative', display: 'flex', flexDirection: 'column',
           margin: '3% 7% 3% 10%',
-          textAlign: 'center'
-        // border: '1px solid blue'
+          textAlign: 'center',
         }}>
           <div style={{
             alignSelf: 'center',
@@ -58,9 +57,8 @@ function Work(props) {
               width: '60%',
               alignSelf: 'center',
             }}/>
+            <hr style={{border: '1px dashed', width: '60%', marginLeft: '25%'}}/>
           </div>
-
-
           {/* this will be future container for another fun thing */}
           <div style={{
             marginTop: '70px',
