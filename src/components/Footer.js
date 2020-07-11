@@ -44,6 +44,7 @@ function Footer(props) {
         (<div className='pages-title'>
           <Link style={{textDecoration: 'none'}} to='/about'><h3>Bio</h3></Link>
           <Link style={{textDecoration: 'none'}} to='/projects'><h3>Projects</h3></Link>
+          <Link style={{textDecoration: 'none'}} to='/play'><h3>Playground</h3></Link>
           <Link style={{textDecoration: 'none'}} to='/blog'><h3>Blog</h3></Link>
           <Link style={{textDecoration: 'none'}} to='/contact'><h3>Contact</h3></Link>
         </div>)

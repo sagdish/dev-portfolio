@@ -4,7 +4,7 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
-import thinking from '../img/thinking.png'
+import mail_box from '../img/mail_box.png'
 import './style.css'
 import '../App.css'
 
@@ -21,9 +21,14 @@ function Contact(props) {
           </Link>
         </div>
 
-        <div style={{position: 'relative', display: 'flex', justifyContent: 'center'}}>
+        <div style={{
+            position: 'relative',
+            display: 'flex',
+            justifyContent: 'center',
+            flexFlow: 'row wrap',
+          }}>
           <div style={{
-            position: 'absolute',
+            // position: 'absolute',
             top: '16%',
             left: '25%',
             fontSize: '27px',
@@ -36,9 +41,9 @@ function Contact(props) {
            <br/>
            or Linkedin <small><i>(link in the footer)</i></small>
           </div>
-          <img src={thinking} alt='' style={{
+          <img src={mail_box} alt='' style={{
               height: 'auto',
-              width: '68%',
+              width: '40%',
               alignSelf: 'center',
             }}/>
         </div>
