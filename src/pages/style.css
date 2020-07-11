@@ -45,7 +45,8 @@
   display: flex;
   width: 40%;
   height: 37vh;
-  font-size: 25px;
+  /* font-size: 25px; */
+  font-size: 20px;
   font-weight: lighter;
   text-align: center;
   /* border: 1px solid purple; */
@@ -95,7 +96,7 @@
   transform: scale(1.1);
   transition-duration: 0.5s;
   opacity: 1;
-  font-size: 14px;
+  /* font-size: 14px; */
 }
 
 .box-in:hover .box-text {
