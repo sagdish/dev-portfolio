@@ -22,7 +22,7 @@ const Container = styled(animated.div)`
 const Item = styled(animated.div)`
   // position: absolute;
   cursor: pointer;
-  width: 100%;
+  width: 105%;
   height: 45px;
   background: #343538;
   text-decoration: none;
@@ -36,8 +36,8 @@ const Item = styled(animated.div)`
   // border: 1px solid red;
 
   @media (max-width: 1149px) {
-    font-size: 18px;
-    width: 100%;
+    font-size: 17px;
+    width: 106%;
   }
 `
 

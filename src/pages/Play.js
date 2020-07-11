@@ -4,6 +4,7 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
+import Stoic from '../components/Stoic'
 import Clock from '../components/Clock'
 
 import thinking from '../img/thinking.png'
@@ -14,53 +15,71 @@ import '../App.css'
 function Work(props) {
   return (
     <Fade duration={2000} >
-      <div className='pages-content'>
+      <div className='blog-content' style={{
+        // justifyContent: 'center',
+        // alignItems: 'center'
+      }}>
 
-        <div className='back-btn'>
-          <Link to='/' style={{
-            color: '#DADADA',
-          }}>
-            <FontAwesomeIcon icon={faChevronLeft} size='3x' />
-          </Link>
-        </div>
+         <Link to='/'className='back-btn-blog' >
+            <FontAwesomeIcon icon={faChevronLeft} size='3x'/>
+        </Link>
 
-        <div style={{position: 'relative', display: 'flex', justifyContent: 'center', flexDirection: 'column'}}>
+        <div style={{position: 'relative', display: 'flex', flexDirection: 'column',
+          margin: '3% 7% 3% 10%',
+          textAlign: 'center'
+        // border: '1px solid blue'
+        }}>
           <div style={{
             alignSelf: 'center',
             fontWeight: 'lighter',
-            fontSize: '25px'
+            fontSize: '20px',
+            marginTop: '20px'
           }}>
             JavaScript Analogue Clock
           </div>
           <Clock />
 
-          <div style={{
-            position: 'absolute',
-            top: '27%',
-            right: '5%',
-            fontSize: '19px',
-            fontWeight: 'lighter',
-          }}>
+          <div className='laptopImage'>
+            <div style={{
+              position: 'absolute',
+              top: '17%',
+              right: '5%',
+              fontSize: '19px',
+              fontWeight: 'lighter',
+            }}>
+              
+              He is still waiting for her ... 
+              <br/>
+              {/* <small><i>(The clock above is ticking)</i></small> */}
+            </div>
             
-            He is still waiting for her ... 
-            <br/>
-            <small><i>(The clock above is ticking)</i></small>
-          </div>
-          
-          <img src={thinking} alt='' style={{
+            <img src={thinking} alt='' style={{
               height: 'auto',
               width: '60%',
               alignSelf: 'center',
             }}/>
+          </div>
 
 
           {/* this will be future container for another fun thing */}
-          {/* <div style={{
-            width: 'auto',
+          <div style={{
+            marginTop: '70px',
+            display: 'flex',
+            // width: '80%',
             height: '400px',
-            border: '1px solid red'
+            justifyContent: 'center',
+            // border: '1px solid red',
+            position: 'relative',
           }}>
-            some ohter placeholder
+            
+            {/* <h3>Stoic Quote Generator</h3> */}
+            {/* <p>as seen </p> */}
+            <Stoic />
+          </div>
+
+          {/* next box: */}
+          {/* <div>
+            <h2>future box</h2>
           </div> */}
 
         </div>
