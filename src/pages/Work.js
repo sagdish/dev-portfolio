@@ -34,16 +34,19 @@ function Work(props) {
               // border: '1px solid blue'
             }}/>
             GraphQL server
+
             <div className='box-text'>
               GraphQL-Yoga, JSONwebtokens, Bcrypt, Prisma ...
               <div className='btn-overText'>
-                <Link to='#' style={{
-                  // color: '#DADADA',
-                }}>
-                  <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
-                </Link> 
+                  <a href='https://us1.prisma.sh/life-logger/life-logger-be/dev'
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                  >
+                    <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
+                  </a>
               </div>
             </div>
+
           </div>
         </div>
 
@@ -59,11 +62,12 @@ function Work(props) {
             <div className='box-text'>
                 PostgreSQL, React, Redux, Express, Node ...
               <div className='btn-overText'>
-                <Link to='#' style={{
-                  // color: '#DADADA',
-                }}>
-                  <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
-                </Link> 
+                <a href='https://life-logger.now.sh'
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                >
+                    <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
+                </a>
               </div>
             </div>
           </div>
@@ -81,14 +85,13 @@ function Work(props) {
             }}/>
             <div className='box-text'>
               MongoDB, React, Express, Node ...
-              <div className='btn-overText' style={{
-                bottom: '40%'
-              }}>
-                <Link to='#' style={{
-                  // color: '#DADADA',
-                }}>
+              <div className='btn-overText'>
+                <a href='https://sf-spots.sagdi.now.sh'
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                >
                   <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
-                </Link> 
+                </a> 
               </div>
             </div>
 
@@ -106,11 +109,12 @@ function Work(props) {
             <div className='box-text'>
               React, Bootstrap4 UI ...
               <div className='btn-overText'>
-                <Link to='#' style={{
-                  // color: '#DADADA',
-                }}>
+                <a href='https://arcregistry.com'
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                >
                   <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
-                </Link> 
+                </a>
               </div>
             </div>
           </div>

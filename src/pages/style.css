@@ -69,7 +69,7 @@
 }
 .btn-overText {
   position: absolute;
-  bottom: 7%;
+  top: 10%;
   right: 5%;
   width: 80px;
   height: 40px;
