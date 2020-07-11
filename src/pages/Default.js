@@ -53,7 +53,7 @@ function Default() {
     <div className='content'>
 
       <div className='content-title'>
-        <p>Full Stack Developer <br/> Experimenting with UI & UX </p>
+        <p>Full Stack Developer <br/> Experimenting with UI/UX </p>
         <Container className='content-title_button' style={{ ...rest, width: width, height: height }} onClick={() => set(open => !open)}>
           {transition.length === 0 ? '. . .' : ''}
           {transition.map(({ item, key, props }, i) => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
@@ -34,9 +34,19 @@ function Work(props) {
               // border: '1px solid blue'
             }}/>
             GraphQL server
+
             <div className='box-text'>
               GraphQL-Yoga, JSONwebtokens, Bcrypt, Prisma ...
+              <div className='btn-overText'>
+                  <a href='https://us1.prisma.sh/life-logger/life-logger-be/dev'
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                  >
+                    <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
+                  </a>
+              </div>
             </div>
+
           </div>
         </div>
 
@@ -51,6 +61,14 @@ function Work(props) {
             Life Logger
             <div className='box-text'>
                 PostgreSQL, React, Redux, Express, Node ...
+              <div className='btn-overText'>
+                <a href='https://life-logger.now.sh'
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                >
+                    <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -67,6 +85,14 @@ function Work(props) {
             }}/>
             <div className='box-text'>
               MongoDB, React, Express, Node ...
+              <div className='btn-overText'>
+                <a href='https://sf-spots.sagdi.now.sh'
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                >
+                  <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
+                </a> 
+              </div>
             </div>
 
           </div>
@@ -74,7 +100,7 @@ function Work(props) {
 
         <div className='box'>
           <div className='box-in'>
-            <img src={arc} alt='' className='box-in' style={{
+            <img src={arc} alt='' style={{
               height: 'auto',
               width: '60%',
               alignSelf: 'center',
@@ -82,6 +108,14 @@ function Work(props) {
             }}/>
             <div className='box-text'>
               React, Bootstrap4 UI ...
+              <div className='btn-overText'>
+                <a href='https://arcregistry.com'
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                >
+                  <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
+                </a>
+              </div>
             </div>
           </div>
         </div>

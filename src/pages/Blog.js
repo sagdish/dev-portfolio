@@ -65,6 +65,15 @@ function Blog(props) {
             </a>
           </p>
         </div>
+
+        <div className='blog-entry'>
+          <h2>About one bike trip</h2>
+          <p>
+            After falling off the bike in Downtown SF I think I learnt few things. Sometimes things happen to us when possibilty is minimal or we too relaxed.
+            I biked this day from Northbay to SF, climbing up the hills about 300 feet height, making through Golden Gate Bridge during strong cross-wind.
+            And later just to hit the pothole in the city while signaling with one arm to traffic around me. Moral of my story: When you relax and think you are good in something - that's when you screw up!
+          </p>
+        </div>
         
       </div>
     </Fade>

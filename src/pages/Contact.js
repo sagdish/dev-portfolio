@@ -29,10 +29,12 @@ function Contact(props) {
             fontSize: '27px',
             fontWeight: 'lighter',
           }}>
-           While I didn't include email form here yet, best to reach me at: 
+           Best to reach me at: 
            <br/> 
            <br/>
-           sagdish@gmail.com or Linkedin
+           sagdish@gmail.com 
+           <br/>
+           or Linkedin 
           </div>
           <img src={thinking} alt='' style={{
               height: 'auto',
