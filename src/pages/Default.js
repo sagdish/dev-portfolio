@@ -55,7 +55,7 @@ function Default() {
 
       <div className='content-title'>
         <p>Full Stack Developer <br/> Experimenting with UI/UX </p>
-        <Container className='content-title_button glow' style={{ ...rest, width: width, height: height }} onClick={() => set(open => !open)}>
+        <Container className={`content-title_button ${open ? '' : 'glow'}`} style={{ ...rest, width: width, height: height }} onClick={() => set(open => !open)}>
           {transition.length === 0 ? '. . .' : ''}
           {transition.map(({ item, key, props }, i) => (
             <>
