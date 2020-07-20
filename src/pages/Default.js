@@ -8,6 +8,7 @@ import { useMediaPredicate } from 'react-media-hook';
 
 import Carousel from '../components/Carousel'
 import { Container, Item } from '../components/styles'
+import './style.css';
 
 function Default() {
   const compressIcon = <FontAwesomeIcon icon={faWindowMinimize} size='sm'/> 
@@ -54,7 +55,7 @@ function Default() {
 
       <div className='content-title'>
         <p>Full Stack Developer <br/> Experimenting with UI/UX </p>
-        <Container className='content-title_button' style={{ ...rest, width: width, height: height }} onClick={() => set(open => !open)}>
+        <Container className='content-title_button glow' style={{ ...rest, width: width, height: height }} onClick={() => set(open => !open)}>
           {transition.length === 0 ? '. . .' : ''}
           {transition.map(({ item, key, props }, i) => (
             <>
