@@ -178,7 +178,7 @@
   margin: 1.5% auto;
   padding: 20px;
   position: relative;
-  opacity: 0.7;
+  opacity: 0.8;
   font-size: 23px;
   font-weight: lighter;
   text-align: justify;
@@ -230,8 +230,8 @@
 }
 
 .content-carousel_line {
-  /* border-right: 4px solid red; */
-  border-right: 4px solid #D11414;
+  /* border-right: 4px solid #D11414; */
+  border-right: 4px solid #DF740C;
   height: 100%;
   margin: 0 auto;
 }
@@ -325,7 +325,7 @@
     margin-top: 40px;
     height: 4px;
     border-right: 0;
-    border-bottom: 4px solid red;
+    border-bottom: 4px solid #DF740C;
     width: 100%;
   }
 
