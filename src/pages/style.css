@@ -49,6 +49,7 @@
   0% { box-shadow: 0 0 0px #c4f9ff; }
   40% { box-shadow: 0 0 0px #18CAE6; }
   60% { box-shadow: 0 0 20px #18CAE6; }
+  /* 80% { box-shadow: 0 0 20px #18CAE6; } */
   100% { box-shadow: 0 0 0px #18CAE6; }
 }
 
