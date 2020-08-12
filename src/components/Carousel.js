@@ -57,7 +57,8 @@ function Carousel() {
                   alignItems: 'center', 
                   width: '280px',
                   height: '90%',
-                  border: '1px solid white'
+                  border: '1px solid white',
+                  // border: '1px solid #DF740C'
                 }}>
                   <Logo />
                 </div>
@@ -91,6 +92,9 @@ function Carousel() {
         </CarouselProvider>
       </div>
       <div className={`content-carousel_line ${animate? 'animate' : ''}`} ></div>
+      {/* <div className={`content-carousel_line-l ${animate? 'animate' : ''}`} ></div>
+      <div className={`content-carousel_line-m ${animate? 'animate' : ''}`} ></div>
+      <div className={`content-carousel_line-r ${animate? 'animate' : ''}`} ></div> */}
       </>
   )
 }
