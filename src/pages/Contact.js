@@ -12,9 +12,8 @@ import '../App.css'
 
 function Contact(props) {
 
-  // copyEmail = () => {
-
-  // }
+  const email1 = 'sagdi';
+  const email2 = 'sh@gmail.com';
 
   return (
     <Fade duration={2000} >
@@ -43,9 +42,9 @@ function Contact(props) {
             lineHeight: '1.8',
             marginBottom: '20px'
           }}>
-           Best to reach me at: 
+           Best to reach me at
            <br/>
-           sagdish@gmail.com
+           my email
             <Tooltip
               content='copied'
               eventOn='onClick'
@@ -55,16 +54,16 @@ function Contact(props) {
               color='white'
               direction='left'
             >
-            <CopyToClipboard text="sagdish@gmail.com">
+            <CopyToClipboard text={email1 + email2}>
               <button style={{
                 backgroundColor: '#212224',
                 color: '#d4d4d4',
-                width: '80px',
+                width: '120px',
                 height: '30px',
                 border: '1px dashed #d4d4d4',
                 borderRadius: '7px',
                 cursor: 'pointer',
-              }}>Copy email</button>
+              }}>Copy to clipboard</button>
            </CopyToClipboard>
             </Tooltip>
 
