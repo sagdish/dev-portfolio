@@ -55,3 +55,8 @@ export const quotes = ["It is impossible for a man to learn what he thinks he al
 "Our life is what our thoughts make it. - Marcus Aurelius",
 "The best revenge is not to be like your enemy. - Marcus Aurelius",
 "Nonjudgement is the pathway to a quiet mind!"]
+
+const myQuotesList = ["All men's miseries derive from not being able to sit in a quiet room alone. - Blaise Pascal",
+  "Tradition becomes our security, and when the mind is secure it is in decay. - Jiddu Krishnamurti",
+  "I would never die for my beliefs because I might be wrong. - Bertrand Russel"
+]
