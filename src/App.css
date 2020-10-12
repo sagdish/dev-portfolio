@@ -145,6 +145,7 @@
   text-align: center;
   /* border: 1px solid #353639; */
   border-radius: 1%;
+  cursor: grab;
 }
 
 .image {
