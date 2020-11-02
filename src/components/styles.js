@@ -1,6 +1,9 @@
 import { animated } from 'react-spring'
 import styled, { css } from 'styled-components'
 
+
+/*  items for multifunctional button: Container and Item */
+
 const Container = styled(animated.div)`
   display: grid;
   grid-template-columns: repeat(3, minmax(80px, 1fr));
@@ -40,6 +43,8 @@ const Item = styled(animated.div)`
     width: 106%;
   }
 `
+
+// bellow components for contact form:
 
 const sharedStyles = css`
   background-color: #eee;
