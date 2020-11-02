@@ -30,12 +30,38 @@ function Contact(props) {
   const [error, setError] = useState('');
 
   const handleSubmit = e => {
+    e.preventDefault();
 
+    for (let key in state) {
+      if (state[key] === '') {
+        setError(`Please provide the ${key}`)
+        return;
+      }
+    }
+
+    /*
+    // this will not work because it return only only block up, not from the whole function:
+    Object.keys(state).forEach(key => {
+      console.log('current key', key, state[key])
+      if (state[key] === '') {
+        setError(`Please provide the ${key}`)
+        return;
+      }
+    });
+    */
+    
+    setError('')
+    console.log("state", state);
   }
 
   const handleInput = e => {
-    
-  }
+    const inputName = e.currentTarget.name;
+    const value = e.currentTarget.value;
+
+    setState(prev => ({ ...prev, [inputName]: value }));
+  };
+
+  // console.log("state", state)
 
   return (
     <Fade duration={2000} >
@@ -94,26 +120,49 @@ function Contact(props) {
           </div>
           {/* contact form goes here */}
           <StyledFormWrapper>
-            <StyledForm>
+            <StyledForm onSubmit={handleSubmit}>
               <p style={{ fontSize: '23px' }}>Contact me</p>
               <label htmlFor="name">Name</label>
-              <StyledInput type='text' name="name" />
+              <StyledInput 
+                type='text'
+                name="name"
+                onChange={handleInput} 
+                value={state.name}
+              />
               <label htmlFor='email'>Email</label>
-              <StyledInput type="email" name="email" />
+              <StyledInput 
+                type="email" 
+                name="email" 
+                onChange={handleInput} 
+                value={state.email}
+              />
               <StyledFieldset>
                 <legend>2 + 2 * 2 = ?</legend>
                 <label>
-                  <input type='radio' value='6' name='quiz' />
+                  <input type='radio' value='6' name='quiz'
+                    onChange={handleInput} 
+                    checked={state.quiz === "6"}
+                  />
                   6
                 </label>
                 <label>
-                  <input type='radio' value='8' name='quiz' />
+                  <input type='radio' value='8' name='quiz' 
+                    onChange={handleInput} 
+                    checked={state.quiz === "8"}
+                  />
                   8
                 </label>
               </StyledFieldset>
               <label htmlFor='message'>Message</label>
-              <StyledTextArea name='message' />
-              <StyledError><p>Error message here</p></StyledError>
+              <StyledTextArea
+                name='message'
+                onChange={handleInput} 
+                value={state.message}
+              />
+              {error && (
+                <StyledError><p>{error}</p></StyledError>
+              )}
+
               <StyledButton type='submit'>Send Me</StyledButton>
             </StyledForm>
           </StyledFormWrapper>
