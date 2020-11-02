@@ -21,7 +21,6 @@ const Container = styled(animated.div)`
     padding: 20px;
   }
 `
-
 const Item = styled(animated.div)`
   // position: absolute;
   cursor: pointer;
@@ -45,16 +44,6 @@ const Item = styled(animated.div)`
 `
 
 // bellow components for contact form:
-
-const sharedStyles = css`
-  background-color: #eee;
-  height: 30px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  margin: 10px 0 15px 0;
-  padding: 10px;
-  box-sizing: border-box;
-`
 const StyledFormWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -63,6 +52,16 @@ const StyledFormWrapper = styled.div`
   padding: 0 20px;
   font-weight: lighter;
   font-size: 16px;
+  /* border: 1px solid red; */
+  `
+const sharedStyles = css`
+  background-color: #eee;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 10px 0 15px 0;
+  padding: 10px;
+  box-sizing: border-box;
 `
 const StyledForm = styled.form`
   width: 100%;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
@@ -15,10 +15,27 @@ import {
   StyledButton, StyledFieldset, StyledError
 } from '../components/styles.js';
 
-function Contact(props) {
+const initialState = {
+  name: '',
+  email: '',
+  message: '',
+  quiz: ''
+}
 
+function Contact(props) {
   const email1 = 'sagdi';
   const email2 = 'sh@gmail.com';
+
+  const [state, setState] = useState(initialState);
+  const [error, setError] = useState('');
+
+  const handleSubmit = e => {
+
+  }
+
+  const handleInput = e => {
+    
+  }
 
   return (
     <Fade duration={2000} >
