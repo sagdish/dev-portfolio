@@ -50,7 +50,6 @@ function Carousel() {
             <Slider className='slider'
               trayProps={{
                 onTouchEnd: touchEvent,
-                // onTouchEnd: touchEvent,
               }}
             >
               <Slide index={0} className='slide' >
