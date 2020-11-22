@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Tooltip from 'react-tooltip-lite';
+import Swal from 'sweetalert2';
 
 import mail_box from '../img/mail_box.png'
 import './style.css'
@@ -54,9 +55,14 @@ function Contact(props) {
       }
     });
     */
-    
+    Swal.fire({
+      icon: 'warning',
+      title: 'Email sending feature is in process',
+      text: 'Please use email address to contact me',
+    })
     setError('')
     console.log("state", state);
+    setState(initialState);
   }
 
   const handleInput = e => {
@@ -120,11 +126,14 @@ function Contact(props) {
                   backgroundColor: '#212224',
                   color: '#d4d4d4',
                   width: '120px',
-                  height: '30px',
+                  height: '35px',
                   border: '1px dashed #d4d4d4',
-                  borderRadius: '7px',
+                  borderRadius: '8px',
                   cursor: 'pointer',
-                }}>Copy to clipboard</button>
+                  outline: 'none'
+                }}>Click to 
+                <br/>
+                copy address</button>
               </CopyToClipboard>
             </Tooltip>
             
