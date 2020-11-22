@@ -37,7 +37,6 @@ function Clock(props) {
  
 
   return (
-    <div className='container'>
       <div className='clock'>
         <img className='hand hour' src={hour} alt='' 
           style={{height: '30%'}}
@@ -52,8 +51,6 @@ function Clock(props) {
           ref={secondRef}
         />
       </div>
-      
-    </div>
   );
 }
 

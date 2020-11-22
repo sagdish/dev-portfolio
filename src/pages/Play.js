@@ -36,7 +36,18 @@ function Work(props) {
           }}>
             JavaScript Analogue Clock
           </div>
-          <Clock />
+
+          <div style={{
+            position: 'absolute',
+            top: '10%',
+            left: '30%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <Clock />
+          </div>
 
           <div className='laptopImage'>
             <div style={{

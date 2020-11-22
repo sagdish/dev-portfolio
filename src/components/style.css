@@ -125,10 +125,10 @@
   .card {
     font-size: 16px !important;
   }
-  .clock {
+  /* .clock {
     width: 200px;
     height: 200px;
-  }
+  } */
   .container {
     left: 25%;
   }

@@ -9,6 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import Stoic from './Stoic';
+import Clock from './Clock';
 import {ReactComponent as Logo} from '../img/logoSvgLg.svg'
 import image1 from '../img/project1j.jpg'
 import image2 from '../img/project2j.jpg'
@@ -40,7 +41,7 @@ function Carousel() {
           naturalSlideWidth={16}
           naturalSlideHeight={9.5}
           isPlaying={false}
-          totalSlides={4}
+          totalSlides={5}
           currentSlide={slide}
           hasMasterSpinner={false}
           infinite={true}
@@ -49,7 +50,6 @@ function Carousel() {
             <Slider className='slider'
               trayProps={{
                 onTouchEnd: touchEvent,
-                // onTouchEnd: touchEvent,
               }}
             >
               <Slide index={0} className='slide' >
@@ -69,10 +69,27 @@ function Carousel() {
               </Slide>
 
               <Slide index={2} className='slide'>
-                  <Image src={image1} className='image' />
+                <div style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      width: '100%',
+                      height: '100%',
+                    }}>
+                  <h1 style={{
+                    fontWeight: 'lighter',
+                    marginBottom: "20px"
+                  }}>What time is it?</h1>
+                  <Clock />
+                </div>
               </Slide>
 
               <Slide index={3} className='slide'>
+                  <Image src={image1} className='image' />
+              </Slide>
+
+              <Slide index={4} className='slide'>
                   <Image src={image2} className='image' />
               </Slide>
 
