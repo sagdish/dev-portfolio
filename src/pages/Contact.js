@@ -65,34 +65,42 @@ function Contact(props) {
 
   return (
     <Fade duration={2000} >
-      <div className='pages-content'>
+      
+      <div className='pages-content' style={{
+        marginTop: '45px',
+        // border: '1px solid blue',
+        alignItems: 'center',
+      }}>
 
-        <div className='back-btn'>
+        <div className='back-btn'
+          style={{
+            alignSelf: 'flex-start'
+          }}
+        >
           <Link to='/' style={{
             color: '#DADADA',
+            // border: '1px solid red',
           }}>
             <FontAwesomeIcon icon={faChevronLeft} size='3x' />
           </Link>
         </div>
 
-        <div style={{
-            position: 'relative',
-            display: 'flex',
-            justifyContent: 'center',
-            flexFlow: 'row wrap',
-          }}>
+        <div>
+            
           <div style={{
             // position: 'absolute',
             // top: '26%',
             // left: '25%',
-            fontSize: '26px',
+            fontSize: '22px',
             fontWeight: 'lighter',
             lineHeight: '1.8',
-            marginBottom: '20px'
+            marginBottom: '20px',
+            marginRight: '20px',
+            // border: '1px solid red',
           }}>
-           You can reach me at
+            Send me a message here
            <br/>
-           my email or contact form here
+           or write me email
             <Tooltip
               content='copied'
               eventOn='onClick'
@@ -114,14 +122,15 @@ function Contact(props) {
                 }}>Copy to clipboard</button>
               </CopyToClipboard>
             </Tooltip>
-
-           {/* <br/>
-           <small>or Linkedin <FontAwesomeIcon icon={faArrowDown} size='sm' /></small> */}
+            
           </div>
+
+        </div>
+
+
           {/* contact form goes here */}
           <StyledFormWrapper>
             <StyledForm onSubmit={handleSubmit}>
-              <p style={{ fontSize: '23px' }}>Contact me</p>
               <label htmlFor="name">Name</label>
               <StyledInput 
                 type='text'
@@ -137,7 +146,7 @@ function Contact(props) {
                 value={state.email}
               />
               <StyledFieldset>
-                <legend>2 + 2 * 2 = ?</legend>
+                <legend>2 + 2 × 2 = ?</legend>
                 <label>
                   <input type='radio' value='6' name='quiz'
                     onChange={handleInput} 
@@ -159,11 +168,11 @@ function Contact(props) {
                 onChange={handleInput} 
                 value={state.message}
               />
-              {error && (
+              {/* {error && ( */}
                 <StyledError><p>{error}</p></StyledError>
-              )}
+              {/* )} */}
 
-              <StyledButton type='submit'>Send Me</StyledButton>
+              <StyledButton type='submit'>Send Message</StyledButton>
             </StyledForm>
           </StyledFormWrapper>
           {/* end of contact form */}
@@ -174,7 +183,9 @@ function Contact(props) {
               alignSelf: 'center',
               marginLeft: '10%'
             }}/> */}
-        </div>
+
+        {/* </div> */}
+
       </div>
     </Fade>
   );
