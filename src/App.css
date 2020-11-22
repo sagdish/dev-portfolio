@@ -194,24 +194,32 @@
 .slider-buttons_l {
   position: absolute;
   font-size: 35px;
-  top: 45%;
+  top: 3%;
   left: 1%;
   color: #A29E9E;
   background-color: transparent;
   border: none;
   opacity: 0.5;
+  height: 95%;
+  outline: none;
   /* margin-left: 5px; */
 }
 .slider-buttons_r {
   position: absolute;
   font-size: 35px;
-  top: 45%;
+  top: 3%;
   right: 1%;
   color: #A29E9E;
   background-color: transparent;
   border: none;
   opacity: 0.5;
+  height: 95%;
+  outline: none;
   /* margin-right: 5px; */
+}
+
+.slider-buttons_r:hover, .slider-buttons_l:hover {
+  opacity: 1;
 }
 .dots{
   position: absolute;
