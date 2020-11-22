@@ -55,11 +55,12 @@ const StyledFormWrapper = styled.div`
   /* border: 1px solid red; */
   `
 const sharedStyles = css`
-  background-color: #eee;
-  /* background-color: #343538; */
+  /* background-color: #eee; */
+  background-color: #343538;
+  color: #fff;
   height: 30px;
   border-radius: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid #4d4f54;
   margin: 10px 0 15px 0;
   padding: 10px;
   box-sizing: border-box;
@@ -81,7 +82,6 @@ const StyledInput = styled.input`
   ${sharedStyles}
 `
 const StyledTextArea = styled.textarea`
-  background-color: #eee;
   width: 100%;
   min-height: 100px;
   resize: none;
@@ -115,7 +115,7 @@ const StyledFieldset = styled.fieldset`
   }
 
   input {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
 `

@@ -34,9 +34,14 @@ function Contact(props) {
 
     for (let key in state) {
       if (state[key] === '') {
-        setError(`Please provide the ${key}`)
+        setError(`Please enter the ${key}`)
         return;
       }
+    }
+
+    if (state.quiz === '8') {
+      setError('Are you sure that 2 + 2 × 2 equals to 8 ?')
+      return;
     }
 
     /*
@@ -168,9 +173,7 @@ function Contact(props) {
                 onChange={handleInput} 
                 value={state.message}
               />
-              {/* {error && ( */}
                 <StyledError><p>{error}</p></StyledError>
-              {/* )} */}
 
               <StyledButton type='submit'>Send Message</StyledButton>
             </StyledForm>
