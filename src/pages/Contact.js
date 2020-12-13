@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Tooltip from 'react-tooltip-lite';
-import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
 import emailjs from 'emailjs-com';
 
@@ -47,12 +46,6 @@ function Contact(props) {
   const [error, setError] = useState('');
   const [request, setRequest] = useState(false)
 
-  console.group()
-  console.log('evn vars: ', process.env.REACT_APP_service_id,
-    process.env.REACT_APP_template_id,
-    process.env.REACT_APP_user_id)
-  console.groupEnd()
-
   const handleSubmit = e => {
     e.preventDefault();
 
@@ -71,8 +64,10 @@ function Contact(props) {
       return;
     }
 
+    // disable send button
     setRequest(true)
 
+    // send form
     emailjs.sendForm(
       process.env.REACT_APP_service_id,
       process.env.REACT_APP_template_id,
@@ -80,36 +75,16 @@ function Contact(props) {
       process.env.REACT_APP_user_id
     )
     .then((result) => {
-        console.log('success in emailjs', result);
+        console.log('email send', result);
         popUp('success', 'Email sent')
     }, (error) => {
-        console.log(error.text);
+        console.log('error sending form: ', error.text);
         popUp('error', 'Something went wrong, please use my email to reach me')
     })
     .finally(res => setRequest(false))
 
-
-    console.log('form', e.target);
-    // toast.success(`Email sent`,
-    //   {
-    //     style: {
-    //       fontSize: '15px', 
-    //       marginTop: '30%',
-    //       borderRadius: '7px',
-    //       pauseOnHover: false,
-    //     },
-    //     position: toast.POSITION.TOP_CENTER,
-    //   }
-    // )
-    
-    // Swal.fire({
-    //   icon: 'warning',
-    //   title: 'Email sending feature is in process',
-    //   text: 'Please use email address to contact me',
-    // })
-
+    // clear form and error state(if any)
     setError('')
-    console.log("state", state);
     setState(initialState);
   }
 
@@ -120,8 +95,6 @@ function Contact(props) {
     setState(prev => ({ ...prev, [inputName]: value }));
     setError('');
   };
-
-  // console.log("state", state)
 
   return (
     <Fade duration={2000} >
