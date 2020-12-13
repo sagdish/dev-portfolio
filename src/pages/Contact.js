@@ -6,8 +6,8 @@ import Fade from 'react-reveal/Fade';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Tooltip from 'react-tooltip-lite';
 import Swal from 'sweetalert2';
+import { toast } from 'react-toastify';
 
-import mail_box from '../img/mail_box.png'
 import './style.css'
 import '../App.css'
 import {
@@ -39,9 +39,12 @@ function Contact(props) {
         return;
       }
     }
-
     if (state.quiz === '8') {
       setError('Are you sure that 2 + 2 × 2 equals to 8 ?')
+      return;
+    }
+    if (state.message.length < 10) {
+      setError(`Type longer message please`)
       return;
     }
 
@@ -55,11 +58,25 @@ function Contact(props) {
       }
     });
     */
-    Swal.fire({
-      icon: 'warning',
-      title: 'Email sending feature is in process',
-      text: 'Please use email address to contact me',
-    })
+
+    console.log('form', e.target);
+    toast.success(`Email sent`,
+      {
+        style: {
+          fontSize: '15px', 
+          marginTop: '30%',
+          borderRadius: '7px',
+          pauseOnHover: false,
+        },
+        position: toast.POSITION.TOP_CENTER,
+      }
+    )
+    // Swal.fire({
+    //   icon: 'warning',
+    //   title: 'Email sending feature is in process',
+    //   text: 'Please use email address to contact me',
+    // })
+
     setError('')
     console.log("state", state);
     setState(initialState);
@@ -109,6 +126,8 @@ function Contact(props) {
             marginRight: '20px',
             // border: '1px solid red',
           }}>
+            You can either
+            <br/>
             Send me a message here
            <br/>
            or write me email
@@ -184,7 +203,10 @@ function Contact(props) {
               />
                 <StyledError><p>{error}</p></StyledError>
 
-              <StyledButton type='submit'>Send Message</StyledButton>
+              <StyledButton
+                type='submit'
+                disabled={false}
+              >Send Message</StyledButton>
             </StyledForm>
           </StyledFormWrapper>
           {/* end of contact form */}

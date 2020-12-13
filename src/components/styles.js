@@ -29,7 +29,7 @@ const Item = styled(animated.div)`
   background: #343538;
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 19px;
   text-align: center;
   line-height: 45px;
   vertical-align: middle;

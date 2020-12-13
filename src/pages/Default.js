@@ -1,14 +1,18 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindowMinimize } from '@fortawesome/free-regular-svg-icons';
 import { useChain, useTransition, useSpring, config } from 'react-spring';
 import { useHistory } from 'react-router-dom';
 import { useMediaPredicate } from 'react-media-hook';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Carousel from '../components/Carousel'
 import { Container, Item } from '../components/styles'
 import './style.css';
+
+toast.configure()
 
 function Default() {
   const compressIcon = <FontAwesomeIcon icon={faWindowMinimize} size='sm'/> 
@@ -20,6 +24,24 @@ function Default() {
     {name: 'Playground', url: 'play'},
     {name: compressIcon}
   ]
+
+  
+
+  useEffect(() => {
+    setTimeout(() => {
+      toast.dark(`Hey, I'm open for new opportunities, go to the contact page to get in touch with me.`,
+        {
+          style: {
+            fontSize: '13px', 
+            backgroundColor: '#252526',
+            borderRadius: '7px'
+          },
+          autoClose: 9000,
+          position: toast.POSITION.BOTTOM_LEFT
+        }
+      )
+    }, 6000)
+  }, [])
 
   //listener to change multi-function button:
   const smallScreen = useMediaPredicate('(max-width: 1149px)')
