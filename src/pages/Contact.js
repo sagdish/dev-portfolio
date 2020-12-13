@@ -7,6 +7,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Tooltip from 'react-tooltip-lite';
 import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
+import emailjs from 'emailjs-com';
 
 import './style.css'
 import '../App.css'
@@ -23,12 +24,34 @@ const initialState = {
   quiz: ''
 }
 
+const popUp = (status, text) => {
+  toast[status](text,
+    {
+      style: {
+        fontSize: '15px', 
+        marginTop: '40%',
+        borderRadius: '7px',
+        pauseOnHover: false,
+        autoClose: 6003,
+      },
+      position: toast.POSITION.TOP_CENTER,
+    }
+  )
+}
+
 function Contact(props) {
   const email1 = 'sagdi';
   const email2 = 'sh@gmail.com';
 
   const [state, setState] = useState(initialState);
   const [error, setError] = useState('');
+  const [request, setRequest] = useState(false)
+
+  console.group()
+  console.log('evn vars: ', process.env.REACT_APP_service_id,
+    process.env.REACT_APP_template_id,
+    process.env.REACT_APP_user_id)
+  console.groupEnd()
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -48,29 +71,37 @@ function Contact(props) {
       return;
     }
 
-    /*
-    // this will not work because it return only only block up, not from the whole function:
-    Object.keys(state).forEach(key => {
-      console.log('current key', key, state[key])
-      if (state[key] === '') {
-        setError(`Please provide the ${key}`)
-        return;
-      }
-    });
-    */
+    setRequest(true)
+
+    emailjs.sendForm(
+      process.env.REACT_APP_service_id,
+      process.env.REACT_APP_template_id,
+      e.target,
+      process.env.REACT_APP_user_id
+    )
+    .then((result) => {
+        console.log('success in emailjs', result);
+        popUp('success', 'Email sent')
+    }, (error) => {
+        console.log(error.text);
+        popUp('error', 'Something went wrong, please use my email to reach me')
+    })
+    .finally(res => setRequest(false))
+
 
     console.log('form', e.target);
-    toast.success(`Email sent`,
-      {
-        style: {
-          fontSize: '15px', 
-          marginTop: '30%',
-          borderRadius: '7px',
-          pauseOnHover: false,
-        },
-        position: toast.POSITION.TOP_CENTER,
-      }
-    )
+    // toast.success(`Email sent`,
+    //   {
+    //     style: {
+    //       fontSize: '15px', 
+    //       marginTop: '30%',
+    //       borderRadius: '7px',
+    //       pauseOnHover: false,
+    //     },
+    //     position: toast.POSITION.TOP_CENTER,
+    //   }
+    // )
+    
     // Swal.fire({
     //   icon: 'warning',
     //   title: 'Email sending feature is in process',
@@ -87,6 +118,7 @@ function Contact(props) {
     const value = e.currentTarget.value;
 
     setState(prev => ({ ...prev, [inputName]: value }));
+    setError('');
   };
 
   // console.log("state", state)
@@ -205,8 +237,8 @@ function Contact(props) {
 
               <StyledButton
                 type='submit'
-                disabled={false}
-              >Send Message</StyledButton>
+                disabled={request ? true : false}
+              >{request ? 'Sending ...' : 'Send Message'}</StyledButton>
             </StyledForm>
           </StyledFormWrapper>
           {/* end of contact form */}
