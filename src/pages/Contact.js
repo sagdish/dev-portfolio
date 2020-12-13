@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Tooltip from 'react-tooltip-lite';
-import Swal from 'sweetalert2';
+import { toast } from 'react-toastify';
+import emailjs from 'emailjs-com';
 
-import mail_box from '../img/mail_box.png'
 import './style.css'
 import '../App.css'
 import {
@@ -23,12 +23,28 @@ const initialState = {
   quiz: ''
 }
 
+const popUp = (status, text) => {
+  toast[status](text,
+    {
+      style: {
+        fontSize: '15px', 
+        marginTop: '40%',
+        borderRadius: '7px',
+        pauseOnHover: false,
+        autoClose: 6003,
+      },
+      position: toast.POSITION.TOP_CENTER,
+    }
+  )
+}
+
 function Contact(props) {
   const email1 = 'sagdi';
   const email2 = 'sh@gmail.com';
 
   const [state, setState] = useState(initialState);
   const [error, setError] = useState('');
+  const [request, setRequest] = useState(false)
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -39,29 +55,36 @@ function Contact(props) {
         return;
       }
     }
-
     if (state.quiz === '8') {
       setError('Are you sure that 2 + 2 × 2 equals to 8 ?')
       return;
     }
+    if (state.message.length < 10) {
+      setError(`Type longer message please`)
+      return;
+    }
 
-    /*
-    // this will not work because it return only only block up, not from the whole function:
-    Object.keys(state).forEach(key => {
-      console.log('current key', key, state[key])
-      if (state[key] === '') {
-        setError(`Please provide the ${key}`)
-        return;
-      }
-    });
-    */
-    Swal.fire({
-      icon: 'warning',
-      title: 'Email sending feature is in process',
-      text: 'Please use email address to contact me',
+    // disable send button
+    setRequest(true)
+
+    // send form
+    emailjs.sendForm(
+      process.env.REACT_APP_service_id,
+      process.env.REACT_APP_template_id,
+      e.target,
+      process.env.REACT_APP_user_id
+    )
+    .then((result) => {
+        console.log('email send', result);
+        popUp('success', 'Email sent')
+    }, (error) => {
+        console.log('error sending form: ', error.text);
+        popUp('error', 'Something went wrong, please use my email to reach me')
     })
+    .finally(res => setRequest(false))
+
+    // clear form and error state(if any)
     setError('')
-    console.log("state", state);
     setState(initialState);
   }
 
@@ -70,9 +93,8 @@ function Contact(props) {
     const value = e.currentTarget.value;
 
     setState(prev => ({ ...prev, [inputName]: value }));
+    setError('');
   };
-
-  // console.log("state", state)
 
   return (
     <Fade duration={2000} >
@@ -109,6 +131,8 @@ function Contact(props) {
             marginRight: '20px',
             // border: '1px solid red',
           }}>
+            You can either
+            <br/>
             Send me a message here
            <br/>
            or write me email
@@ -184,7 +208,10 @@ function Contact(props) {
               />
                 <StyledError><p>{error}</p></StyledError>
 
-              <StyledButton type='submit'>Send Message</StyledButton>
+              <StyledButton
+                type='submit'
+                disabled={request ? true : false}
+              >{request ? 'Sending ...' : 'Send Message'}</StyledButton>
             </StyledForm>
           </StyledFormWrapper>
           {/* end of contact form */}
