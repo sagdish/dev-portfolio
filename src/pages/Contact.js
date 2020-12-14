@@ -118,54 +118,6 @@ function Contact(props) {
           </Link>
         </div>
 
-        <div>
-            
-          <div style={{
-            // position: 'absolute',
-            // top: '26%',
-            // left: '25%',
-            fontSize: '22px',
-            fontWeight: 'lighter',
-            lineHeight: '1.8',
-            marginBottom: '20px',
-            marginRight: '20px',
-            // border: '1px solid red',
-          }}>
-            You can either
-            <br/>
-            Send me a message here
-           <br/>
-           or write me email
-            <Tooltip
-              content='copied'
-              eventOn='onClick'
-              eventOff='onMouseOut'
-              useHover={false}
-              background='black'
-              color='white'
-              direction='left'
-            >
-              <CopyToClipboard text={email1 + email2}>
-                <button style={{
-                  backgroundColor: '#212224',
-                  color: '#d4d4d4',
-                  width: '120px',
-                  height: '35px',
-                  border: '1px dashed #d4d4d4',
-                  borderRadius: '8px',
-                  cursor: 'pointer',
-                  outline: 'none'
-                }}>Click to 
-                <br/>
-                copy address</button>
-              </CopyToClipboard>
-            </Tooltip>
-            
-          </div>
-
-        </div>
-
-
           {/* contact form goes here */}
           <StyledFormWrapper>
             <StyledForm onSubmit={handleSubmit}>
@@ -216,14 +168,50 @@ function Contact(props) {
           </StyledFormWrapper>
           {/* end of contact form */}
 
-          {/* <img src={mail_box} alt='' style={{
-              height: 'auto',
-              width: '40%',
-              alignSelf: 'center',
-              marginLeft: '10%'
-            }}/> */}
 
-        {/* </div> */}
+          <div>
+          <div style={{
+            // position: 'absolute',
+            // top: '26%',
+            // left: '25%',
+            fontSize: '22px',
+            fontWeight: 'lighter',
+            lineHeight: '1.8',
+            marginBottom: '20px',
+            marginLeft: '30px',
+            // border: '1px solid red',
+          }}>Alternatively
+              <br/>
+              You can grab my
+              <br/>
+              email address:
+            <Tooltip
+              content='copied'
+              eventOn='onClick'
+              eventOff='onMouseOut'
+              useHover={false}
+              background='black'
+              color='white'
+              direction='left'
+            >
+              <CopyToClipboard text={email1 + email2}>
+                <button style={{
+                  backgroundColor: '#212224',
+                  color: '#d4d4d4',
+                  width: '120px',
+                  height: '35px',
+                  border: '1px dashed #d4d4d4',
+                  borderRadius: '8px',
+                  cursor: 'pointer',
+                  outline: 'none'
+                }}>Click to 
+                <br/>
+                copy address</button>
+              </CopyToClipboard>
+            </Tooltip>
+            
+          </div>
+        </div>
 
       </div>
     </Fade>
