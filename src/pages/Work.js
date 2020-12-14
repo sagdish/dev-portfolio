@@ -1,20 +1,26 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 
 import arc from '../img/arc-logo.png'
+import arcss from '../img/arc.png'
 import graphql from '../img/graphql-logo.png'
+import graphqlss from '../img/graphql.png'
 import lifeLogger from '../img/logo.png'
+import lifeLoggerss from '../img/project2j.jpg'
+import sfSpots from '../img/project1j.jpg'
 import sfspot from '../img/SF.png'
+import breathLogo from '../img/leafs.png'
+import breathApp from '../img/breath.png'
 import './style.css'
 import '../App.css'
 
-function Work(props) {
+function Work() {
   return (
     <Fade duration={2000} >
-      <div className='pages-content'>
+      <div className='projects-content'>
 
         <div className='back-btn-blog'>
           <Link to='/' style={{
@@ -26,98 +32,220 @@ function Work(props) {
 
         <div className='box'>
           <div className='box-in'>
-            <img src={graphql} alt='' style={{
-              height: 'auto',
-              width: '50%',
-              alignSelf: 'center',
-              marginBottom: '2%',
-              // border: '1px solid blue'
-            }}/>
+            <a href='https://us1.prisma.sh/life-logger/life-logger-be/dev'
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+                <img src={graphql} alt='' style={{
+                  height: 'auto',
+                  width: '40%',
+                  alignSelf: 'center',
+                  marginBottom: '2%',
+                  // border: '1px solid blue'
+                }}/>
+            </a>
             GraphQL server
-
-            <div className='box-text'>
-              GraphQL-Yoga, JSONwebtokens, Bcrypt, Prisma ...
-              <div className='btn-overText'>
-                  <a href='https://us1.prisma.sh/life-logger/life-logger-be/dev'
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                  >
-                    <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
-                  </a>
-              </div>
-            </div>
-
+            <br/>
           </div>
+
+          <div className='box-text'>
+            <a href='https://us1.prisma.sh/life-logger/life-logger-be/dev'
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              <img src={graphqlss} alt='' style={{
+                  height: 'auto',
+                  width: '90%',
+                  alignSelf: 'center',
+                  marginBottom: '2%',
+                  // border: '1px solid blue'
+                }}/>
+              <div className='text-overImg'>
+                • GraphQL server<br/>
+                • JSONwebtokens for authentificaiton & Bcrypt for hashing <br/>
+                • Deployed on Prisma API with MySQL database
+              </div>
+            </a>
+          </div>  
+        </div>
+
+        <div className='devider'>
+          <hr/>
         </div>
 
         <div className='box'>
           <div className='box-in'>
-            <img src={lifeLogger} alt='' style={{
-              height: 'auto',
-              width: '36%',
-              alignSelf: 'center',
-              marginBottom: '2%'
-            }}/>
-            Life Logger
-            <div className='box-text'>
-                PostgreSQL, React, Redux, Express, Node ...
-              <div className='btn-overText'>
-                <a href='https://life-logger.now.sh'
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                >
-                    <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
-                </a>
-              </div>
+            <a href='https://sf-spots.sagdi.now.sh'
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+                <img src={sfspot} alt='' style={{
+                  height: 'auto',
+                  width: '75%',
+                  alignSelf: 'center',
+                  marginBottom: '2%',
+                  // border: '1px solid blue'
+                }}/>
+            </a>
+            <div>
+              Study-friendly places where you can study in San Francisco, Bay Area.
             </div>
           </div>
-        </div>
 
-        <div className='box'>
-          <div className='box-in'>
-            <img src={sfspot} alt='' style={{
+          <div className='box-text'>
+            <a href='https://sf-spots.sagdi.now.sh'
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              <img src={sfSpots} alt='' style={{
                 height: 'auto',
-                width: '83%',
-                // border: '1px solid white',
-                // borderRadius: '5%',
-                // boxShadow: '7px 13px 29px -8px rgba(0,0,0,0.75)',
-                alignSelf: 'center'
-            }}/>
-            <div className='box-text'>
-              MongoDB, React, Express, Node ...
-              <div className='btn-overText'>
-                <a href='https://sf-spots.sagdi.now.sh'
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                >
-                  <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
-                </a> 
-              </div>
-            </div>
+                width: '100%',
+                alignSelf: 'center',
+                marginBottom: '2%',
+                // border: '1px solid blue'
+              }}/>
 
-          </div>
+              <div className='text-overImg'>
+                • Solo managed project from start to finish (from UI mockups to deployed Front and Backend) <br/>
+                • Integrated Google maps API into React to display place on map based on location & retrieve its photo <br/>
+                • Used user’s current geolocation to get list of nearby places
+                <br/>
+                • Stack: MongoDB | React | Express | Node | Google-maps API 
+              </div>
+            </a>
+          </div>  
+        </div>
+
+        <div className='devider'>
+          <hr/>
         </div>
 
         <div className='box'>
           <div className='box-in'>
-            <img src={arc} alt='' style={{
-              height: 'auto',
-              width: '60%',
-              alignSelf: 'center',
-              // marginBottom: '5%'
-            }}/>
-            <div className='box-text'>
-              React, Bootstrap4 UI ...
-              <div className='btn-overText'>
-                <a href='https://arcregistry.com'
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                >
-                  <FontAwesomeIcon icon={faExternalLinkAlt} size='lg' />
-                </a>
-              </div>
+            <a href='https://life-logger.now.sh'
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+                <img src={lifeLogger} alt='' style={{
+                  height: 'auto',
+                  width: '30%',
+                  alignSelf: 'center',
+                  marginBottom: '2%',
+                  // border: '1px solid blue'
+                }}/>
+            </a>
+            Life Logger
+            <br/>
+            <div>
+              An app designed to help consumers organize their regular, non-recurring expenses
+              <br/>
             </div>
           </div>
+
+          <div className='box-text'>
+            <a href='https://life-logger.now.sh'
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              <img src={lifeLoggerss} alt='' style={{
+                height: 'auto',
+                width: '100%',
+                alignSelf: 'center',
+                marginBottom: '2%',
+                // border: '1px solid blue'
+              }}/>
+
+              <div className='text-overImg'>
+              • Created GraphQL server for back end <br/>
+              • Designed User interface, and integrated it to a final deployed version via Styled components & CSS <br/>
+              • Worked on state management and integrated data to Calendar API
+              </div>
+            </a>
+          </div>  
+        </div>
+
+        <div className='devider'>
+          <hr/>
+        </div>
+
+        <div className='box'>
+          <div className='box-in'>
+            <a href='https://breathing-app.sagdi.vercel.app'
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+                <img src={breathLogo} alt='' style={{
+                  paddingTop: '5%',
+                  height: 'auto',
+                  width: '45%',
+                  alignSelf: 'center',
+                  marginBottom: '2%',
+                  // border: '1px solid blue'
+                }}/>
+            </a>
+            4 - 7 - 8 Breathing Technique App
+          </div>
+
+          <div className='box-text'>
+            <a href='https://breathing-app.sagdi.vercel.app/'
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              <img src={breathApp} alt='' style={{
+                height: 'auto',
+                width: '70%',
+                alignSelf: 'center',
+              }}/>
+
+              <div className='text-overImg'>
+              • Start/stop functionality & display timing on the screen <br/>
+              • Capturing and manipulating sequence with multiple JS Intervals and Timeous<br/>
+              • Integrated sounds
+                <br/>
+              </div>
+            </a>
+          </div>  
+        </div>
+
+        <div className='devider'>
+          <hr/>
+        </div>
+
+        <div className='box'>
+          <div className='box-in'>
+            <a href='https://arcregistry.com'
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+                <img src={arc} alt='' style={{
+                  paddingTop: '5%',
+                  height: 'auto',
+                  width: '50%',
+                  alignSelf: 'center',
+                }}/>
+            </a>
+            <div>
+              React, Bootstrap4, UI ...
+            </div>
+          </div>
+
+          <div className='box-text'>
+            <a href='https://arcregistry.com'
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              <img src={arcss} alt='' style={{
+                height: 'auto',
+                width: '60%',
+                alignSelf: 'center',
+              }}/>
+
+              <div className='text-overImg'>
+              • Designed and developed website for psychologist staffing agency and implemented SEO tactics 
+                <br/>
+              </div>
+            </a>
+          </div>  
         </div>
         
       </div>

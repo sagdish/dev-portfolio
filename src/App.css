@@ -46,7 +46,12 @@
 .pages-title h3 {
   font-weight: lighter;
   font-size: 23px;
-  color:  #DADADA;
+  color: #DADADA;
+}
+
+.pages-title h3.current {
+  color: #47CDDA;
+  opacity: 1;
 }
 
 .nav-bar .line {

@@ -42,11 +42,35 @@ function Footer(props) {
           SAGDI FORMANOV
         </div>) :
         (<div className='pages-title'>
-          <Link style={{textDecoration: 'none'}} to='/about'><h3>Bio</h3></Link>
-          <Link style={{textDecoration: 'none'}} to='/projects'><h3>Projects</h3></Link>
-          <Link style={{textDecoration: 'none'}} to='/play'><h3>Playground</h3></Link>
-          <Link style={{textDecoration: 'none'}} to='/blog'><h3>Blog</h3></Link>
-          <Link style={{textDecoration: 'none'}} to='/contact'><h3>Contact</h3></Link>
+          <Link style={{textDecoration: 'none'}} to='/about'>
+            <h3
+              className={location.pathname === '/about' ? 'current' : ''}
+            >Bio</h3>
+          </Link>
+
+          <Link style={{textDecoration: 'none'}} to='/projects'>
+            <h3
+               className={location.pathname === '/projects' ? 'current' : ''}
+            >Projects</h3>
+          </Link>
+
+          <Link style={{textDecoration: 'none'}} to='/play'>
+            <h3
+              className={location.pathname === '/play' ? 'current' : ''}
+            >Playground</h3>
+          </Link>
+
+          <Link style={{textDecoration: 'none'}} to='/blog'>
+            <h3
+              className={location.pathname === '/blog' ? 'current' : ''}
+            >Blog</h3>
+          </Link>
+
+          <Link style={{textDecoration: 'none'}} to='/contact'>
+            <h3
+              className={location.pathname === '/contact' ? 'current' : ''}
+            >Contact</h3>
+          </Link>
         </div>)
       }
 
