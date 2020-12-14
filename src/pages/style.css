@@ -16,14 +16,22 @@
   /* align-self: center; */
 }
 
+.projects-content {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid white; */
+}
+
 .back-btn-blog {
   position: sticky;
   position: -webkit-sticky;
   top: 10%;
   left: 3%;
-  /* border: 1px solid red; */
-  margin-left: -30px;
+  margin-left: 30px;
   color: #DADADA;
+  /* border: 1px solid red; */
 }
 
 .blog-entry {
@@ -56,40 +64,58 @@
 
 .box {
   display: flex;
-  width: 40%;
-  height: 37vh;
+  width: 70%;
+  /* height: 50vh; */
+  height: auto;
   /* font-size: 25px; */
   font-size: 20px;
   font-weight: lighter;
   text-align: center;
   /* border: 1px solid purple; */
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   /* transition: all 0.3s ease; */
-  /* background-color: #212224;
-  margin: 1%; */
+  /* background-color: #212224; */
+  margin: auto;
+  transition: all 0.5s ease;
+  margin-bottom: 60px;
 }
 
 .box-text {
   margin-top: 10px;
   display: flex;
-  /* position: relative; */
+  flex-direction: column;
+  width: 50%;
+  min-width: 250px;
+  position: relative;
   /* flex-direction: column; */
   justify-content: center;
-  opacity: 0;
+  /* opacity: 0; */
   transition: all 0.5s ease;
   font-size: 16px;
+  /* border: 1px solid blue; */
 }
-.btn-overText {
+
+.text-overImg {
   position: absolute;
-  top: 10%;
+  top: 20%;
   right: 5%;
-  width: 80px;
-  height: 40px;
-  /* background-color: #212224; */
-  /* color: #fff; */
-  /* border: 1px solid gray; */
+  width: 80%;
+  color: #fff;
+  font-size: 17px;
+  text-align: left;
+  opacity: 0;
+}
+
+.box:hover .text-overImg {
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+
+.box:hover .box-text img {
+  opacity: 0.15;
+  transition-duration: 0.4s;
 }
 
 .box-in {
@@ -99,22 +125,20 @@
   /* align-items: center; */
   opacity: 0.7;
   transition: all 0.5s ease;
-  /* border: 1px dashed white; */
-  width: 70%;
-  /* width: 80%; */
+  width: 50%;
+  /* cursor: pointer; */
   position: relative;
 }
 
 .box-in:hover {
-  transform: scale(1.1);
-  transition-duration: 0.5s;
+  transform: scale(1.05);
+  transition-duration: 0.4s;
   opacity: 1;
   /* font-size: 14px; */
 }
 
-.box-in:hover .box-text {
-  opacity: 1;
-  transition-duration: 0.5s;
+.box-in > div {
+  font-size: 16px;
 }
 
 /* change default color of link: */
@@ -123,6 +147,12 @@ a {
 }
 a:hover {
    color: #47CDDA
+}
+
+.devider hr {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 850px) {
@@ -135,16 +165,29 @@ a:hover {
   }
   .box-text {
     opacity: 0.7;
+    width: 90%;
   }
-  .btn-overText {
+  .box-in {
+    width: 80%;
+  }
+  .text-overImg {
     top: 9%;
     right: 1%;
-   
+    opacity: 1;
   }
+
+  .box .box-text img {
+    opacity: 0.15;
+    transition-duration: 0.4s;
+  }
+  
 }
 
 @media only screen and (max-width: 650px) {
   .laptopImage {
     visibility: hidden;
+  }
+  .text-overImg {
+    font-size: 13px;
   }
 }

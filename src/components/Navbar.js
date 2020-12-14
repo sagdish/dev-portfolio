@@ -9,10 +9,6 @@ function Navbar() {
   // console.log('location',location)
   return (
     <div className='nav-bar'>
-      {/* {location.pathname === '/' ? null : (
-      <div className='pages-title'>
-        <h3>Bio</h3><h3>Projects</h3><h3>Blog</h3><h3>Contact</h3>
-      </div>)} */}
       <div className='line'>
         <hr/>
       </div>
