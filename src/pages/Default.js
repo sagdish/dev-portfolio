@@ -29,7 +29,7 @@ function Default() {
 
   useEffect(() => {
     setTimeout(() => {
-      toast.dark(`Hey, I'm open for new opportunities, go to the contact page to get in touch with me.`,
+      toast.dark(`Hey, I'm open for new opportunities. You can get in touch with me on the Contact page.`,
         {
           style: {
             fontSize: '13px', 
