@@ -7,7 +7,7 @@ function Footer(props) {
   const location = useLocation();
   
   return (
-    <div className='footer'>
+    <div className={location.pathname !== '/' ? 'footer active'  : 'footer'}>
       <div className='footer-social'>
         <a href="https://github.com/sagdish" 
           target="_blank" 

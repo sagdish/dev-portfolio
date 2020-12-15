@@ -296,7 +296,9 @@
 }
 
 .footer.active {
-  background: #212224;
+  /* background: #212224; */
+  justify-content: flex-start;
+  padding-left: 10%;
 }
 
 .footer-social {
