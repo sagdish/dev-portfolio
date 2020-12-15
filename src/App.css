@@ -129,6 +129,7 @@
   margin-top: 20px;
   margin-right: 10%;
   cursor: pointer;
+  /* border: 1px solid red; */
 }
 
 .content-carousel {
@@ -291,7 +292,7 @@
   width: 100vw;
   bottom: 0;
   height: 80px;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
   /* border: 1px solid red; */
 }
 
@@ -424,6 +425,9 @@
     width: 90%;
   }
 
+  .content-title_button {
+    align-self: center;
+  }
 }
 
 .logo {

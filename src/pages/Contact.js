@@ -103,16 +103,16 @@ function Contact(props) {
         marginTop: '45px',
         // border: '1px solid blue',
         alignItems: 'center',
+        justifyContent: 'space-evenly'
       }}>
 
         <div className='back-btn'
           style={{
-            alignSelf: 'flex-start'
+            alignSelf: 'flex-start',
           }}
         >
           <Link to='/' style={{
             color: '#DADADA',
-            // border: '1px solid red',
           }}>
             <FontAwesomeIcon icon={faChevronLeft} size='3x' />
           </Link>
