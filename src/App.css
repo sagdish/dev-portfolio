@@ -25,12 +25,18 @@
   justify-content: center;
   flex-direction: column;
   width: 100vw;
-  height: 80px;
+  height: 60px;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   /* border: 1px solid red; */
 }
+
+.nav-bar.active {
+  background: #212224;
+}
+
 .pages-title {
   display: flex;
   flex-direction: row;
@@ -57,6 +63,14 @@
 .nav-bar .line {
   width: 80%;
   align-self: flex-end;
+  /* transition: 0.3s;
+  transition-duration: 0.4s; */
+
+
+
+  transition: 0.3s ease-out;
+  transform:scaleY(1);
+  transform-origin:top
 }
 
 /* end navbar styles */
@@ -276,9 +290,13 @@
   justify-content: space-around;
   width: 100vw;
   bottom: 0;
-  height: 100px;
+  height: 80px;
   margin-bottom: 5px;
   /* border: 1px solid red; */
+}
+
+.footer.active {
+  background: #212224;
 }
 
 .footer-social {
