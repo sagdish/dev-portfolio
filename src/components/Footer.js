@@ -5,8 +5,9 @@ import { faGithub, faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-
 
 function Footer(props) {
   const location = useLocation();
+  
   return (
-    <div className='footer'>
+    <div className={location.pathname !== '/' ? 'footer active'  : 'footer'}>
       <div className='footer-social'>
         <a href="https://github.com/sagdish" 
           target="_blank" 
@@ -40,38 +41,38 @@ function Footer(props) {
 
       {location.pathname === '/' ? (<div className='footer-name'>
           SAGDI FORMANOV
-        </div>) :
-        (<div className='pages-title'>
-          <Link style={{textDecoration: 'none'}} to='/about'>
-            <h3
-              className={location.pathname === '/about' ? 'current' : ''}
-            >Bio</h3>
-          </Link>
+        </div>) : null
+        // (<div className='pages-title'>
+        //   <Link style={{textDecoration: 'none'}} to='/about'>
+        //     <h3
+        //       className={location.pathname === '/about' ? 'current' : ''}
+        //     >Bio</h3>
+        //   </Link>
 
-          <Link style={{textDecoration: 'none'}} to='/projects'>
-            <h3
-               className={location.pathname === '/projects' ? 'current' : ''}
-            >Projects</h3>
-          </Link>
+        //   <Link style={{textDecoration: 'none'}} to='/projects'>
+        //     <h3
+        //        className={location.pathname === '/projects' ? 'current' : ''}
+        //     >Projects</h3>
+        //   </Link>
 
-          <Link style={{textDecoration: 'none'}} to='/play'>
-            <h3
-              className={location.pathname === '/play' ? 'current' : ''}
-            >Playground</h3>
-          </Link>
+        //   <Link style={{textDecoration: 'none'}} to='/play'>
+        //     <h3
+        //       className={location.pathname === '/play' ? 'current' : ''}
+        //     >Playground</h3>
+        //   </Link>
 
-          <Link style={{textDecoration: 'none'}} to='/blog'>
-            <h3
-              className={location.pathname === '/blog' ? 'current' : ''}
-            >Blog</h3>
-          </Link>
+        //   <Link style={{textDecoration: 'none'}} to='/blog'>
+        //     <h3
+        //       className={location.pathname === '/blog' ? 'current' : ''}
+        //     >Blog</h3>
+        //   </Link>
 
-          <Link style={{textDecoration: 'none'}} to='/contact'>
-            <h3
-              className={location.pathname === '/contact' ? 'current' : ''}
-            >Contact</h3>
-          </Link>
-        </div>)
+        //   <Link style={{textDecoration: 'none'}} to='/contact'>
+        //     <h3
+        //       className={location.pathname === '/contact' ? 'current' : ''}
+        //     >Contact</h3>
+        //   </Link>
+        // </div>)
       }
 
       
