@@ -87,9 +87,18 @@ function Work(props) {
           </div>
 
           {/* next box: */}
-          {/* <div>
-            <h2>future box</h2>
-          </div> */}
+
+          <div style={{
+            marginTop: '20px',
+            display: 'flex',
+            // width: '80%',
+            height: '400px',
+            justifyContent: 'center',
+            // border: '1px solid red',
+            position: 'relative',
+          }}>
+            {/* Svg content goes here */}
+          </div>
 
         </div>
 
