@@ -23,7 +23,7 @@ function Footer(props) {
           <FontAwesomeIcon icon={faLinkedin} size='2x' className='icon'/>
         </a>
 
-        <a href="https://twitter.com/FormanovSagdi" 
+        <a href="https://twitter.com/sagdi_f" 
           target="_blank" 
           rel="noopener noreferrer" 
         >
@@ -41,7 +41,7 @@ function Footer(props) {
 
       {location.pathname === '/' ? (<div className='footer-name'>
           SAGDI FORMANOV
-        </div>) : null
+      </div>) : null
         // (<div className='pages-title'>
         //   <Link style={{textDecoration: 'none'}} to='/about'>
         //     <h3
