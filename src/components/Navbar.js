@@ -24,7 +24,7 @@ function Navbar() {
 
       {location.pathname === '/' ? null : (
         <div className='pages-title' style={{
-          alignSelf: 'flex-end'
+          justifyContent: 'space-between'
         }}>
           <Link style={{textDecoration: 'none'}} to='/about'>
             <h3
