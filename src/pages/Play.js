@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
@@ -7,12 +7,15 @@ import Fade from 'react-reveal/Fade';
 import Stoic from '../components/Stoic'
 import Clock from '../components/Clock'
 
+import {ReactComponent as Car} from '../img/car.svg';
 import thinking from '../img/thinking.png'
 import '../components/style.css'
 import './style.css'
 import '../App.css'
 
 function Work(props) {
+  const [animate, setAnimate] = useState(false);
+
   return (
     <Fade duration={2000} >
       <div className='blog-content' style={{
@@ -20,8 +23,8 @@ function Work(props) {
         // alignItems: 'center'
       }}>
 
-         <Link to='/'className='back-btn-blog' >
-            <FontAwesomeIcon icon={faChevronLeft} size='3x'/>
+        <Link to='/'className='back-btn-blog' >
+          <FontAwesomeIcon icon={faChevronLeft} size='3x'/>
         </Link>
 
         <div style={{position: 'relative', display: 'flex', flexDirection: 'column',
@@ -70,9 +73,41 @@ function Work(props) {
             }}/>
             <hr style={{border: '1px dashed', width: '60%', marginLeft: '25%'}}/>
           </div>
+
           {/* this will be future container for another fun thing */}
           <div style={{
             marginTop: '70px',
+            display: 'flex',
+            // width: '80%',
+            height: '400px',
+            justifyContent: 'center',
+            // border: '1px solid red',
+            position: 'relative',
+          }}>
+
+            {/* Svg content goes here */}
+          
+            <div className="car-container">
+              <button onClick={() => setAnimate(!animate)}
+                style={{
+                  width: '92px',
+                  height: '30px',
+                  backgroundColor: '#212224',
+                  color: '#fff',
+                  border: '1px solid #fff',
+                  cursor: 'pointer',
+                  fontSize: '16px'
+                }}
+              >
+                {animate ? "Erase it" : "Draw a car"}
+              </button>
+              <Car className={`${animate ? "active" : ""}`} />
+            </div>
+          </div>
+
+
+          <div style={{
+            marginTop: '20px',
             display: 'flex',
             // width: '80%',
             height: '400px',
@@ -88,17 +123,7 @@ function Work(props) {
 
           {/* next box: */}
 
-          <div style={{
-            marginTop: '20px',
-            display: 'flex',
-            // width: '80%',
-            height: '400px',
-            justifyContent: 'center',
-            // border: '1px solid red',
-            position: 'relative',
-          }}>
-            {/* Svg content goes here */}
-          </div>
+          
 
         </div>
 
