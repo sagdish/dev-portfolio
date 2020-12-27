@@ -21,11 +21,11 @@ function Carousel() {
 
   const addAndRemove = () => {
     setAnimate(true)
-    console.log('here',animate)
+    // console.log('here',animate)
     
     setTimeout(() => {
       setAnimate(false)
-      console.log(animate)
+      // console.log(animate)
     }, 1000);
   }
 

@@ -284,6 +284,7 @@
 /* end of content styles */
 
 /* Footer: */
+
 .footer {
   display: flex;
   flex-flow: row wrap;
@@ -291,13 +292,10 @@
   justify-content: space-around;
   width: 100vw;
   bottom: 0;
-  height: 80px;
-  /* margin-bottom: 5px; */
-  /* border: 1px solid red; */
+  min-height: 80px;
 }
 
 .footer.active {
-  /* background: #212224; */
   justify-content: flex-start;
   padding-left: 10%;
 }

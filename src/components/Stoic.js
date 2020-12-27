@@ -27,7 +27,7 @@ function Stoic(props) {
     // quotes[random] = replace
     // index < quotes.length ? setIndex(index + 1) : setIndex(1)
   }
-  console.log(quotes.length, random)
+  // console.log(quotes.length, random)
   return (
     <div>
       <div style={{fontSize:'20px', marginTop: '5%', fontWeight: 'lighter'}}>

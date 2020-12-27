@@ -41,7 +41,7 @@ function Footer(props) {
 
       {location.pathname === '/' ? (<div className='footer-name'>
           SAGDI FORMANOV
-        </div>) : null
+      </div>) : null
         // (<div className='pages-title'>
         //   <Link style={{textDecoration: 'none'}} to='/about'>
         //     <h3
