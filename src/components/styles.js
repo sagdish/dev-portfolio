@@ -35,7 +35,7 @@ const Item = styled(animated.div)`
   border-radius: 5px;
   will-change: transform, opacity;
 
-  &:hover {
+  :hover {
     background-color: #515255;
   }
 
@@ -108,6 +108,13 @@ const StyledButton = styled.button`
 
   &:hover {
     background-color: #515255;
+  }
+
+  &:disabled {
+    color: gray;
+    background: #343538;
+    opacity: 0.7;
+    cursor: not-allowed;
   }
 `
 
