@@ -14,7 +14,6 @@ const Container = styled(animated.div)`
   // cursor: pointer;
   box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
   will-change: width, height;
-  // border: 0.5px solid #ffffff;
   @media (max-width: 1149px) {
     grid-template-columns: repeat(2, minmax(80px, 1fr));
     will-change: width, height;
@@ -35,7 +34,10 @@ const Item = styled(animated.div)`
   vertical-align: middle;
   border-radius: 5px;
   will-change: transform, opacity;
-  // border: 1px solid red;
+
+  &:hover {
+    background-color: #515255;
+  }
 
   @media (max-width: 1149px) {
     font-size: 17px;
@@ -66,26 +68,29 @@ const sharedStyles = css`
   box-sizing: border-box;
 `
 const StyledForm = styled.form`
+  margin-top: 10px;
   width: 100%;
   max-width: 700px;
   padding: 15px 40px 20px;
   background-color: #212224;
   border-radius: 10px;
   box-sizing: border-box;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-  /* border: 1px solid yellow; */
-  /* font-weight: lighter; */
+  /* box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2); */
+  box-shadow: -3px -3px 7px #242425,
+              5px 5px 5px rgba(0, 0, 0, 0.2);
 `
 const StyledInput = styled.input`
   display: 'block';
   width: 100%;
-  ${sharedStyles}
+  ${sharedStyles};
+  border-radius: 15px;
 `
 const StyledTextArea = styled.textarea`
   width: 100%;
   min-height: 100px;
   resize: none;
-  ${sharedStyles}
+  ${sharedStyles};
+  border-radius: 15px;
 `
 const StyledButton = styled.button`
   display: block;
@@ -98,11 +103,17 @@ const StyledButton = styled.button`
   padding: 0 15px;
   cursor: pointer;
   box-sizing: border-box;
+  box-shadow: -3px -3px 7px #242425,
+              5px 5px 5px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background-color: #515255;
+  }
 `
 
 const StyledFieldset = styled.fieldset`
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 20px;
   padding: 10px;
   margin: 10px 0 20px;
 
