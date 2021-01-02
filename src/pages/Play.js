@@ -96,7 +96,10 @@ function Work(props) {
                   color: '#fff',
                   border: '1px solid #fff',
                   cursor: 'pointer',
-                  fontSize: '16px'
+                  fontSize: '16px',
+                  '&:hover': {
+                    backgroundColor: '#515255'
+                  }
                 }}
               >
                 {animate ? "Erase it" : "Draw a car"}
