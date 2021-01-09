@@ -57,6 +57,7 @@
 
 .pages-title h3.current {
   color: #47CDDA;
+  text-decoration: underline;
   opacity: 1;
 }
 

@@ -36,8 +36,10 @@ function Default() {
             backgroundColor: '#252526',
             borderRadius: '7px'
           },
-          autoClose: 9000,
-          position: toast.POSITION.BOTTOM_LEFT
+          autoClose: 8000,
+          position: toast.POSITION.BOTTOM_LEFT,
+          toastId: 'myCustomId',
+          pauseOnFocusLoss: false,
         }
       )
     }, 6000)
