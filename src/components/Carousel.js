@@ -12,6 +12,7 @@ import Stoic from './Stoic';
 import Clock from './Clock';
 import {ReactComponent as Logo} from '../img/logoSvgLg.svg'
 import image1 from '../img/project1j.jpg'
+import iconPack from '../img/all-view.png'
 import image2 from '../img/project2j.jpg'
 import '../App.css'
 
@@ -86,6 +87,11 @@ function Carousel() {
               </Slide>
 
               <Slide index={3} className='slide'>
+                  {/* <div >
+                    <img src={iconPack} style={{
+                      width: '70%'
+                    }} />
+                  </div> */}
                   <Image src={image1} className='image' />
               </Slide>
 
