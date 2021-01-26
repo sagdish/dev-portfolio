@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Default from './pages/Default';
 import Footer from './components/Footer';
+import Spinner from './components/Spinner';
 import './App.css';
 
 const Play = lazy(() => import("./pages/Play"));
@@ -18,7 +19,7 @@ function App() {
     <div className='main-container'>
       <Navbar />
       <Fade delay={1000} duration={3000}>
-        <Suspense fallback={<h1> Loading ...</h1>}>
+        <Suspense fallback={<Spinner />}>
           <Route exact path='/' component={ Default } />
           <Route path='/about' component={ About } />
           <Route path='/projects' component={ Work } />
