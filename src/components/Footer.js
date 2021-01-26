@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faTwitter, faInstagram, faDribbble } from '@fortawesome/free-brands-svg-icons';
 
 function Footer(props) {
   const location = useLocation();
@@ -30,13 +30,19 @@ function Footer(props) {
           <FontAwesomeIcon icon={faTwitter} size='2x' className='icon' />
         </a>
 
+        <a href="https://dribbble.com/sagdish" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+        >
+          <FontAwesomeIcon icon={faDribbble} size='2x' className='icon'/>
+        </a>
+
         <a href="https://instagram.com/forsi_ph" 
           target="_blank" 
           rel="noopener noreferrer" 
         >
           <FontAwesomeIcon icon={faInstagram} size='2x' className='icon'/>
         </a>
-
       </div>
 
       {location.pathname === '/' ? (<div className='footer-name'>
