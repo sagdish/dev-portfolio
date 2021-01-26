@@ -18,6 +18,15 @@ import './style.css'
 import '../App.css'
 
 function Work() {
+
+  const style = {
+    height: 'auto',
+    width: '100%',
+    alignSelf: 'center',
+    marginBottom: '2%',
+  }
+
+
   return (
     <Fade duration={2000} >
       <div className='projects-content'>
@@ -37,11 +46,8 @@ function Work() {
               rel="noopener noreferrer" 
             >
                 <img src={graphql} alt='' style={{
-                  height: 'auto',
+                  ...style,
                   width: '40%',
-                  alignSelf: 'center',
-                  marginBottom: '2%',
-                  // border: '1px solid blue'
                 }}/>
             </a>
             GraphQL server
@@ -54,11 +60,8 @@ function Work() {
               rel="noopener noreferrer" 
             >
               <img src={graphqlss} alt='' style={{
-                  height: 'auto',
+                  ...style,
                   width: '90%',
-                  alignSelf: 'center',
-                  marginBottom: '2%',
-                  // border: '1px solid blue'
                 }}/>
               <div className='text-overImg'>
                 • GraphQL server<br/>
@@ -80,11 +83,8 @@ function Work() {
               rel="noopener noreferrer" 
             >
                 <img src={sfspot} alt='' style={{
-                  height: 'auto',
+                  ...style,
                   width: '75%',
-                  alignSelf: 'center',
-                  marginBottom: '2%',
-                  // border: '1px solid blue'
                 }}/>
             </a>
             <div>
@@ -97,13 +97,7 @@ function Work() {
               target="_blank" 
               rel="noopener noreferrer" 
             >
-              <img src={sfSpots} alt='' style={{
-                height: 'auto',
-                width: '100%',
-                alignSelf: 'center',
-                marginBottom: '2%',
-                // border: '1px solid blue'
-              }}/>
+              <img src={sfSpots} alt='' style={style}/>
 
               <div className='text-overImg'>
                 • Solo managed project from start to finish (from UI mockups to deployed Front and Backend) <br/>
@@ -127,11 +121,8 @@ function Work() {
               rel="noopener noreferrer" 
             >
                 <img src={lifeLogger} alt='' style={{
-                  height: 'auto',
-                  width: '30%',
-                  alignSelf: 'center',
-                  marginBottom: '2%',
-                  // border: '1px solid blue'
+                  ...style,
+                  width: '30%'
                 }}/>
             </a>
             Life Logger
@@ -147,13 +138,7 @@ function Work() {
               target="_blank" 
               rel="noopener noreferrer" 
             >
-              <img src={lifeLoggerss} alt='' style={{
-                height: 'auto',
-                width: '100%',
-                alignSelf: 'center',
-                marginBottom: '2%',
-                // border: '1px solid blue'
-              }}/>
+              <img src={lifeLoggerss} alt='' style={style}/>
 
               <div className='text-overImg'>
               • Created GraphQL server for back end <br/>
@@ -175,12 +160,9 @@ function Work() {
               rel="noopener noreferrer" 
             >
                 <img src={breathLogo} alt='' style={{
+                  ...style,
                   paddingTop: '5%',
-                  height: 'auto',
                   width: '45%',
-                  alignSelf: 'center',
-                  marginBottom: '2%',
-                  // border: '1px solid blue'
                 }}/>
             </a>
             4 - 7 - 8 Breathing Technique App

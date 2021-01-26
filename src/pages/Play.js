@@ -15,6 +15,15 @@ import '../App.css'
 
 function Work(props) {
   const [animate, setAnimate] = useState(false);
+  const [ imgLoaded, setImageLoaded ] = useState(false);
+
+  const loaded = {
+    height: 'auto',
+    width: '60%',
+    alignSelf: 'center',
+    transition: 'opacity 0.5s',
+    opacity: imgLoaded ? 1 : 0,
+  }
 
   return (
     <Fade duration={2000} >
@@ -66,11 +75,11 @@ function Work(props) {
               {/* <small><i>(The clock above is ticking)</i></small> */}
             </div>
             
-            <img src={thinking} alt='' style={{
-              height: 'auto',
-              width: '60%',
-              alignSelf: 'center',
-            }}/>
+            <img src={thinking}
+              alt='man siting on the bench'
+              onLoad={() => setImageLoaded(true)}
+              style={loaded}
+            />
             <hr style={{border: '1px dashed', width: '60%', marginLeft: '25%'}}/>
           </div>
 
