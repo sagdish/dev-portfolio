@@ -78,7 +78,7 @@ function Default() {
     <div className='content'>
 
       <div className='content-title'>
-        <p>Product Manager <br/> Designer & Developer <br/> In the past </p>
+        <p>Product Manager <br/> Transitioned from a Design & Development </p>
         <Container className={`content-title_button ${open ? '' : 'glow'}`} style={{ ...rest, width: width, height: height }} onClick={() => set(open => !open)}>
           {transition.length === 0 ? '. . .' : ''}
           {transition.map(({ item, key, props }, i) => (
