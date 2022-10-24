@@ -12,7 +12,7 @@ import Carousel from '../components/Carousel'
 import { Container, Item } from '../components/styles'
 import './style.css';
 
-toast.configure()
+// toast.configure()
 
 function Default() {
   const compressIcon = <FontAwesomeIcon icon={faWindowMinimize} size='sm'/> 
@@ -27,23 +27,23 @@ function Default() {
 
   
 
-  useEffect(() => {
-    setTimeout(() => {
-      toast.dark(`Hey, I'm open for new opportunities. You can get in touch with me on the Contact page.`,
-        {
-          style: {
-            fontSize: '13px', 
-            backgroundColor: '#252526',
-            borderRadius: '7px'
-          },
-          autoClose: 8000,
-          position: toast.POSITION.BOTTOM_LEFT,
-          toastId: 'myCustomId',
-          pauseOnFocusLoss: false,
-        }
-      )
-    }, 6000)
-  }, [])
+//   useEffect(() => {
+//     setTimeout(() => {
+//       toast.dark(`Hey, I'm open for new opportunities. You can get in touch with me on the Contact page.`,
+//         {
+//           style: {
+//             fontSize: '13px', 
+//             backgroundColor: '#252526',
+//             borderRadius: '7px'
+//           },
+//           autoClose: 8000,
+//           position: toast.POSITION.BOTTOM_LEFT,
+//           toastId: 'myCustomId',
+//           pauseOnFocusLoss: false,
+//         }
+//       )
+//     }, 6000)
+//   }, [])
 
   //listener to change multi-function button:
   const smallScreen = useMediaPredicate('(max-width: 1149px)')
