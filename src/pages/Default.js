@@ -5,8 +5,8 @@ import { faWindowMinimize } from '@fortawesome/free-regular-svg-icons';
 import { useChain, useTransition, useSpring, config } from 'react-spring';
 import { useHistory } from 'react-router-dom';
 import { useMediaPredicate } from 'react-media-hook';
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 import Carousel from '../components/Carousel'
 import { Container, Item } from '../components/styles'
