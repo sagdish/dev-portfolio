@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
-import Fade from 'react-reveal/Fade';
 
 import '../App.css'
 import './style.css'
@@ -10,7 +9,7 @@ import './style.css'
 function Blog(props) {
 
   return (
-    <Fade duration={2000} >
+    <div>
       <div className='blog-content'>
 
           <Link to='/'className='back-btn-blog' >
@@ -76,7 +75,7 @@ function Blog(props) {
         </div>
         
       </div>
-    </Fade>
+    </div>
   );
 }
 

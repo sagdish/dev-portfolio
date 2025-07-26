@@ -12,9 +12,9 @@ function Stoic(props) {
     setQuotesList(quotes)
   },[])
   const [flipped, setFlip] = useState(false)
-  const { transform, opacity } = useSpring({
+  const { rotateX, opacity } = useSpring({
     opacity: flipped ? 1 : 0,
-    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
+    rotateX: flipped ? 180 : 0,
     config: { mass: 2, tension: 500, friction: 110 }
   });
   // let i = 1;
@@ -45,14 +45,20 @@ function Stoic(props) {
       <div onClick={randomize}>
         <a.div 
           className='card'
-          style= {{ opacity: opacity.interpolate(o => 1 - o), transform }}
+          style= {{ 
+            opacity: opacity.to(o => 1 - o), 
+            transform: rotateX.to(r => `perspective(600px) rotateX(${r}deg)`)
+          }}
           >
           {quotesList[random]}
         </a.div>
 
         <a.div 
           className='card'
-          style= {{ opacity, transform: transform.interpolate(t => `${t} rotateX(180deg)`) }}
+          style= {{ 
+            opacity, 
+            transform: rotateX.to(r => `perspective(600px) rotateX(${r + 180}deg)`)
+          }}
         >
           {quotesList[random]}
         </a.div>

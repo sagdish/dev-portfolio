@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
-import Fade from 'react-reveal/Fade';
 
 import Spinner from '../components/Spinner'
 import '../App.css'
@@ -24,7 +23,7 @@ function About(props) {
   }
 
   return(
-    <Fade duration={1000}>
+    <div>
       <div className='pages-content'>
         <div className='back-btn'>
           <Link to='/' style={{
@@ -55,7 +54,7 @@ function About(props) {
           The future is just another path.
         </div>
       </div>
-    </Fade>
+    </div>
   );
 }
 

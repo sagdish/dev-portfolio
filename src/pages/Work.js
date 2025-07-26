@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
-import Fade from 'react-reveal/Fade';
 
 import arc from '../img/arc-logo.png'
 import arcss from '../img/arc.png'
@@ -28,7 +27,7 @@ function Work() {
 
 
   return (
-    <Fade duration={2000} >
+    <div>
       <div className='projects-content'>
 
         <div className='back-btn-blog'>
@@ -231,7 +230,7 @@ function Work() {
         </div>
         
       </div>
-    </Fade>
+    </div>
   );
 }
 

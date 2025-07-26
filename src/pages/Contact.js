@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
-import Fade from 'react-reveal/Fade';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Tooltip from 'react-tooltip-lite';
 import { toast } from 'react-toastify';
@@ -16,7 +15,7 @@ import {
   StyledButton, StyledFieldset, StyledError
 } from '../components/styles.js';
 
-const [initialState] = {
+const initialState = {
   name: '',
   email: '',
   message: '',
@@ -99,7 +98,7 @@ function Contact(props) {
   };
 
   return (
-    <Fade duration={2000} >
+    <div>
       
       <div className='pages-content' style={{
         marginTop: '45px',
@@ -216,7 +215,7 @@ function Contact(props) {
         </div>
 
       </div>
-    </Fade>
+    </div>
   );
 }
 

@@ -1,9 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindowMinimize } from '@fortawesome/free-regular-svg-icons';
-import { useChain, useTransition, useSpring, config } from 'react-spring';
-import { useHistory } from 'react-router-dom';
+import { useTransition, useSpring, config } from 'react-spring';
 import { useMediaPredicate } from 'react-media-hook';
 // import { toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
@@ -22,7 +21,7 @@ function Default() {
     {name: 'Blog-ish', url: 'blog'},
     {name: 'Contact', url: 'contact'},
     {name: 'Playground', url: 'play'},
-    {name: compressIcon}
+    {name: 'close', icon: compressIcon}
   ]
 
   
@@ -51,9 +50,8 @@ function Default() {
 
   // below is animation for button menu:
   const [open, set ] = useState(false);
-  const springRef = useRef();
-  const { width, opacity, height, ...rest } = useSpring({
-    ref: springRef,
+  
+  const { width, height, ...rest } = useSpring({
     config: config.default,
     from: { width: '100px', height: '45px', background: '#212224'},
     to: { 
@@ -62,17 +60,13 @@ function Default() {
         }
   })
 
-  const transRef = useRef()
-  const transition = useTransition(open ? populate : [], item => item.name, {
-    ref: transRef,
-    unique: true,
-    trail: 400 / populate.length,
+  const transitions = useTransition(open ? populate : [], {
     from: { opacity: 0, transform: 'scale(0)' },
     enter: { opacity: 1, transform: 'scale(1)' },
-    leave: { opacity: 0, transform: 'scale(0)' }
+    leave: { opacity: 0, transform: 'scale(0)' },
+    trail: 400 / populate.length,
+    config: config.default
   })
-
-  useChain(open ? [springRef, transRef] : [transRef, springRef], [0, open ? 0.1 : 0.6])
 
   return (
     <div className='content'>
@@ -80,16 +74,15 @@ function Default() {
       <div className='content-title'>
         <p>Product Manager <br/> Transitioned from a Design & Development </p>
         <Container className={`content-title_button ${open ? '' : 'glow'}`} style={{ ...rest, width: width, height: height }} onClick={() => set(open => !open)}>
-          {transition.length === 0 ? '. . .' : ''}
-          {transition.map(({ item, key, props }, i) => (
-            <>
-              { i !== 5 ? (
-              <Link to={item.url} key={key} style={{textDecoration: 'none'}}>
-                <Item key={key} style={{ ...props}}> {item.name} </Item>
-              </Link>) : 
-              <Item key={key} style={{ ...props}}> {item.name} </Item>
-              }
-            </>
+          {transitions.length === 0 ? '. . .' : ''}
+          {transitions((style, item, t, index) => (
+            item.url ? (
+              <Link to={item.url} key={`item-${index}`} style={{textDecoration: 'none'}}>
+                <Item style={style}> {item.name} </Item>
+              </Link>
+            ) : (
+              <Item key={`item-${index}`} style={style}> {item.icon || item.name} </Item>
+            )
           ))}
         </Container>
       </div>

@@ -1,5 +1,4 @@
 import React, { lazy, Suspense} from 'react';
-import Fade from 'react-reveal/Fade';
 import { Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -18,16 +17,14 @@ function App() {
   return (
     <div className='main-container'>
       <Navbar />
-      <Fade delay={1000} duration={3000}>
-        <Suspense fallback={<Spinner />}>
-          <Route exact path='/' component={ Default } />
-          <Route path='/about' component={ About } />
-          <Route path='/projects' component={ Work } />
-          <Route path='/blog' component={ Blog } />
-          <Route path='/play' component={ Play } />
-          <Route path='/contact' component={ Contact } />
-        </Suspense>
-      </Fade>
+      <Suspense fallback={<Spinner />}>
+        <Route exact path='/' component={ Default } />
+        <Route path='/about' component={ About } />
+        <Route path='/projects' component={ Work } />
+        <Route path='/blog' component={ Blog } />
+        <Route path='/play' component={ Play } />
+        <Route path='/contact' component={ Contact } />
+      </Suspense>
       <Footer />
     </div>
   );

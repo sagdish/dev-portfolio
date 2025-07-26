@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -15,6 +15,7 @@ import '../App.css'
 
 function Carousel() {
   const [animate, setAnimate] = useState(false)
+  const swiperRef = useRef(null)
 
   const addAndRemove = () => {
     setAnimate(true)
@@ -36,14 +37,11 @@ function Carousel() {
     <div className='content-carousel'>
           <div className='carousel'>
             <Swiper
-              modules={[Navigation]}
+              modules={[]}
               spaceBetween={0}
               slidesPerView={1}
               loop={true}
-              navigation={{
-                prevEl: '.slider-buttons_l',
-                nextEl: '.slider-buttons_r',
-              }}
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
               onSlideChange={() => {
                 addAndRemove();
               }}
@@ -93,12 +91,18 @@ function Carousel() {
 
             </Swiper>
             <button className='slider-buttons_l' 
-              onClick={addAndRemove}
+              onClick={() => {
+                swiperRef.current?.slidePrev();
+                addAndRemove();
+              }}
             >
               <FontAwesomeIcon icon={faAngleLeft} size='sm' />
             </button>
             <button className='slider-buttons_r'
-              onClick={addAndRemove}
+              onClick={() => {
+                swiperRef.current?.slideNext();
+                addAndRemove();
+              }}
             >
               <FontAwesomeIcon icon={faAngleRight} size='sm' />
             </button>
