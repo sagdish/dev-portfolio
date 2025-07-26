@@ -16,7 +16,7 @@ import {
   StyledButton, StyledFieldset, StyledError
 } from '../components/styles.js';
 
-const initialState = {
+const [initialState] = {
   name: '',
   email: '',
   message: '',
@@ -76,10 +76,12 @@ function Contact(props) {
     )
     .then((result) => {
         console.log('email send', result);
-        popUp('success', 'Email sent')
+        // popUp('success', 'Email sent')
+        alert('Success, Email sent')
     }, (error) => {
         console.log('error sending form: ', error.text);
-        popUp('error', 'Something went wrong, please use my email to reach me')
+        // popUp('error', 'Something went wrong, please use my email to reach me')
+        alert('Something went wrong, please use my email to reach me')
     })
     .finally(res => setRequest(false))
 

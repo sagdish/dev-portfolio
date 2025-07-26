@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { CarouselProvider, 
-  Slider, Slide, ButtonBack, 
-  ButtonNext, Image,
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -16,7 +14,6 @@ import image2 from '../img/project2j.jpg'
 import '../App.css'
 
 function Carousel() {
-  const [slide, setSlide] = useState(0)
   const [animate, setAnimate] = useState(false)
 
   const addAndRemove = () => {
@@ -37,22 +34,23 @@ function Carousel() {
   return(
     <>
     <div className='content-carousel'>
-        <CarouselProvider
-          naturalSlideWidth={16}
-          naturalSlideHeight={9.5}
-          isPlaying={false}
-          totalSlides={5}
-          currentSlide={slide}
-          hasMasterSpinner={false}
-          infinite={true}
-        >
           <div className='carousel'>
-            <Slider className='slider'
-              trayProps={{
-                onTouchEnd: touchEvent,
+            <Swiper
+              modules={[Navigation]}
+              spaceBetween={0}
+              slidesPerView={1}
+              loop={true}
+              navigation={{
+                prevEl: '.slider-buttons_l',
+                nextEl: '.slider-buttons_r',
               }}
+              onSlideChange={() => {
+                addAndRemove();
+              }}
+              onTouchEnd={touchEvent}
+              className='slider'
             >
-              <Slide index={0} className='slide' >
+              <SwiperSlide className='slide'>
                 <div className='carousel-text' style={{
                   alignItems: 'center', 
                   width: '280px',
@@ -62,13 +60,13 @@ function Carousel() {
                 }}>
                   <Logo />
                 </div>
-              </Slide>
+              </SwiperSlide>
 
-              <Slide index={1} className='slide' >
+              <SwiperSlide className='slide'>
                 <Stoic />
-              </Slide>
+              </SwiperSlide>
 
-              <Slide index={2} className='slide'>
+              <SwiperSlide className='slide'>
                 <div style={{
                       display: 'flex',
                       flexDirection: 'column',
@@ -83,30 +81,28 @@ function Carousel() {
                   }}>What time is it?</h1>
                   <Clock />
                 </div>
-              </Slide>
+              </SwiperSlide>
 
-              <Slide index={3} className='slide'>
-                  <Image src={image1} className='image' />
-              </Slide>
+              <SwiperSlide className='slide'>
+                <img src={image1} className='image' alt="Project 1" />
+              </SwiperSlide>
 
-              <Slide index={4} className='slide'>
-                  <Image src={image2} className='image' />
-              </Slide>
+              <SwiperSlide className='slide'>
+                <img src={image2} className='image' alt="Project 2" />
+              </SwiperSlide>
 
-            </Slider>
-            <ButtonBack className='slider-buttons_l' 
+            </Swiper>
+            <button className='slider-buttons_l' 
               onClick={addAndRemove}
             >
               <FontAwesomeIcon icon={faAngleLeft} size='sm' />
-            </ButtonBack>
-            <ButtonNext className='slider-buttons_r'
+            </button>
+            <button className='slider-buttons_r'
               onClick={addAndRemove}
             >
               <FontAwesomeIcon icon={faAngleRight} size='sm' />
-            </ButtonNext>
+            </button>
           </div>
-
-        </CarouselProvider>
       </div>
       <div className={`content-carousel_line ${animate? 'animate' : ''}`} ></div>
       {/* <div className={`content-carousel_line-l ${animate? 'animate' : ''}`} ></div>
